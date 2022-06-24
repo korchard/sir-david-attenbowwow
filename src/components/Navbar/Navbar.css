@@ -1,0 +1,44 @@
+.navLinks {
+    flex: auto;
+    display: inline-flex;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.navLink {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.navLink:hover {
+    /* color: rgb(243, 29, 118); */
+    color: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .navLinks {
+        position: sticky;
+        top: 0;
+        right: 0;
+        padding-left: 3vh;
+        padding-bottom: 3vh;
+    }
+    .navLink {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .navLinks {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .navLinks {
+        display: block;
+        text-align: center;
+    }
+}

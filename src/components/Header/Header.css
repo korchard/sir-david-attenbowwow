@@ -1,0 +1,44 @@
+.headerItem {
+    flex: auto;
+    display: inline-flex;
+    height: auto;
+}
+
+.headerLogo {
+    height: 30px;
+    width: auto;
+    position: absolute;
+    top: 30px;
+}
+
+.header {
+    font-size: 2em;
+    font-family: 'Monoton', cursive;
+    padding: 3vh;
+}
+
+.headerDescription {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 1300px) {
+    .headerItem {
+        display: flex;
+    }
+    .header {
+        font-size: 1.5em;
+        padding-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .headerItem {
+        text-align: center;
+    }
+    .header {
+        font-size: 1.3em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 import {
   HashRouter as Router,
+  Navigate,
   Route,
-  Redirect,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 
 // COMPONENTS
@@ -24,15 +24,19 @@ function App() {
             <Header />
             <Navbar />
           </div>
-            <Switch>
-            <Redirect exact from='/' to='/work' />
+            <Routes>
+            <Route path="/" element={<Navigate replace to="/about" />} />
               <Route
                 exact
                 path='/about'
                 component={About}/>
+              {/* <Route
+                exact
+                path='/work'
+                component={Work}/> */}
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1 className='error'>404</h1>} />
-            </Switch>
+            </Routes>
           <Footer />
         </div>
       </Router>

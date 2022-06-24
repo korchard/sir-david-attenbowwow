@@ -3,14 +3,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // REDUX
-import { configureStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
 // SAGAS/REDUCER
-import rootSaga from './redux/sagas/_root.saga';
-import rootReducer from './redux/reducers/_root.reducer';
+// import rootSaga from './redux/sagas/_root.saga';
+// import rootReducer from './redux/reducers/_root.reducer';
 
 // IMPORT APP
 import App from './components/App/App';
@@ -29,22 +29,19 @@ const middlewareList = process.env.NODE_ENV === 'development' ?
   [sagaMiddleware];
 
 // STORE INSTANCE
-const store = cconfigureStore(
+const store = createStore(
   // () => {}, --- use if no reducers needed
-  rootReducer,
+  // rootReducer,
   applyMiddleware(...middlewareList),
 );
 
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <Provider store={store}>
-  //   <App />
-  // </Provider>,
-  <React.StrictMode store={store}>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>,
 );
 
 reportWebVitals();
