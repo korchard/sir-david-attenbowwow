@@ -1,14 +1,15 @@
 import React from 'react';
 import {
   HashRouter as Router,
-  Navigate,
+  Redirect,
   Route,
-  Routes,
+  Switch,
 } from 'react-router-dom';
 
 // COMPONENTS
 import About from '../About/About';
 import Footer from '../Footer/Footer';
+import Gallery from '../Gallery/Gallery';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 
@@ -24,19 +25,19 @@ function App() {
             <Header />
             <Navbar />
           </div>
-            <Routes>
-            <Route path="/" element={<Navigate replace to="/about" />} />
+            <Switch>
+            <Redirect exact from='/' to='/about' />
               <Route
                 exact
                 path='/about'
                 component={About}/>
-              {/* <Route
+              <Route
                 exact
-                path='/work'
-                component={Work}/> */}
+                path='/gallery'
+                component={Gallery}/>
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1 className='error'>404</h1>} />
-            </Routes>
+            </Switch>
           <Footer />
         </div>
       </Router>
