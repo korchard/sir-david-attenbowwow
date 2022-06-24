@@ -1,17 +1,52 @@
+// REACT
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+
+// REDUX
+import { configureStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
+import logger from 'redux-logger';
+
+// SAGAS/REDUCER
+import rootSaga from './redux/sagas/_root.saga';
+import rootReducer from './redux/reducers/_root.reducer';
+
+// IMPORT APP
+import App from './components/App/App';
+
+// CSS
 import './index.css';
-import App from './App';
+
+// PERFORMANCE
 import reportWebVitals from './reportWebVitals';
+
+// MIDDLEWARE
+const sagaMiddleware = createSagaMiddleware();
+
+const middlewareList = process.env.NODE_ENV === 'development' ?
+  [sagaMiddleware, logger] :
+  [sagaMiddleware];
+
+// STORE INSTANCE
+const store = cconfigureStore(
+  // () => {}, --- use if no reducers needed
+  rootReducer,
+  applyMiddleware(...middlewareList),
+);
+
+sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <Provider store={store}>
+  //   <App />
+  // </Provider>,
+  <React.StrictMode store={store}>
     <App />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
