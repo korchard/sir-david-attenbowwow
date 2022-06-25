@@ -5,7 +5,7 @@
     flex-direction: row;
     overflow: hidden;
     height: auto;
-    border-bottom: 2px solid rgb(243, 29, 118);
+    border-bottom: 2px solid black;
     margin-left: 30px;
     margin-right: 30px;
     padding-bottom: 5vh;
@@ -14,17 +14,19 @@
 .aboutContent {
     border-bottom: 1px solid black;
     padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 
 .aboutHeader {
     margin-left: 45%;
+    height: 10vh;
 }
 
 .animatedText {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Shadows Into Light', cursive;
     font-weight: 400;
-    /* font-family: 'Monoton', cursive; */
     display: inline-flex;
+    font-size: 2em;
 }
 
 .aboutBio {
@@ -61,7 +63,7 @@
 }
 
 .factsHeader {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Shadows Into Light', cursive;
     font-weight: 400;
     font-size: 2em;
     text-align: center;

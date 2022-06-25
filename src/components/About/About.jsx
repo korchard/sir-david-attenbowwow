@@ -19,11 +19,11 @@ const About = () => {
     <div className='aboutItem'>
       <div className='aboutContent'>
           <div className='aboutHeader'>
-            I am a &nbsp;
+            I am &nbsp;
             <AnimatedText />.
           </div>
           <div className='aboutBio'>
-            <img src='../images/me0.jpeg' alt='me' className='aboutImg'></img>
+            <img src='../images/daveySteamboat.jpg' alt='me' className='aboutImg'></img>
             <p className='aboutInfo'>
             Interested in all things yoga, Reiki, Ayurveda, circus, refurbishing furniture, 
             wildness, and community building. If you want to discuss any of the above interests, 

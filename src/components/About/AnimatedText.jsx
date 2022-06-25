@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
+import Typewriter from 'typewriter-effect';
 
 // STYLING
 import './About.css';
@@ -7,27 +7,15 @@ import './About.css';
 const AnimatedText = () => {
   return (
     <>
-      <ReactTypingEffect
-        text={['Software Engineer', 'Maker', 'Artist', 'Collaborator']}
-        cursorRenderer={cursor => <h1>{cursor}</h1>}
-        speed={200}
-        eraseSpeed={100}
-        eraseDelay={100}
-        typingDelay={200}
-        displayTextRenderer={(text, i) => {
-          return (
-            <h1 className='animatedText'>
-              {text.split('').map((char, i) => {
-                const key = `${i}`;
-                return (
-                  <span
-                    key={key}
-                  >{char}</span>
-                );
-              })}
-            </h1>
-          );
-        }} />
+    <div className='animatedText'>
+      <Typewriter
+        options={{
+          strings: ['an Ecologist', 'a Documentarian', 'a Sassy Pants'],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+      </div>
     </>
   );
 };
