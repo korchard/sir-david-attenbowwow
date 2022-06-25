@@ -32,10 +32,10 @@ const Footer = () => {
             <br></br>
             <div className='contactLinks'>
               <Link to='/about' onClick={instagram} className='instagram'>
-                  <FaInstagramSquare />
+                <FaInstagramSquare />
+                &nbsp;
+                @sir_david_attenbowwow
               </Link>
-              &nbsp;
-              @sir_david_attenbowwow
             </div>
           <h2 className='contactHeader'>Or send a message here ----> </h2>
         </div>
