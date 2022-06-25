@@ -4,6 +4,11 @@ import React from 'react';
 import './Gallery.css';
 
 const Gallery = () => {
+    // const [image, setImage] = useState(true);
+
+    // const toggleImage = () => {
+    //     setImage(!image)  
+    // }
 
   return (
     <div className='galleryItem'>

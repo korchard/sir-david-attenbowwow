@@ -8,11 +8,6 @@ import FunFacts from './FunFacts';
 import './About.css';
 
 const About = () => {
-    // const [image, setImage] = useState(true);
-
-    // const toggleImage = () => {
-    //     setImage(!image)  
-    // }
 
   return (
       <>
@@ -23,7 +18,7 @@ const About = () => {
               <AnimatedText />.
             </div>
             <div className='aboutBio'>
-              <img src='../images/daveySteamboat.jpg' alt='me' className='aboutImg'></img>
+              <img src='../images/daveySteamboat.jpg' alt='Davey near Steamboat Lake' className='aboutImg'></img>
               <p className='aboutInfo'>
               Hello, friends! I am here to encourage you to consider your relationship to this 
               beautiful planet that we exist within, to foster your own ecological identity, and 

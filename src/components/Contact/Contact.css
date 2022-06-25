@@ -1,7 +1,5 @@
 .contactItem {
-    /* display: inline-flex; */
     overflow: hidden;
-    /* height: auto; */
 }
 
 label {
@@ -28,7 +26,6 @@ textarea {
     border: 0;
     outline: 0;
     background: transparent;
-    /* border-top: 1px solid black; */
     border-bottom: 1px solid black;
     margin-top: 5px;
     width: 100%;
@@ -52,7 +49,7 @@ textarea {
 
 .contactButton:hover {
     color: #FFF;
-    background-color: rgb(243, 29, 118);
+    background-color: rgba(7,0,156,0.7161458333333333);
 }
 
 .swal2-content {

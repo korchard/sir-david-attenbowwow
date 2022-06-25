@@ -13,9 +13,9 @@
     -[] Make contact form larger
     -[]
 -ABOUT
-    -[] Update about
-    -[] Change picture to one of me, Eddy, Dave
-    -[] Update fun facts, or omit them
+    -[x] Update about
+    -[x] Change picture to one of me, Eddy, Dave
+    -[x] Update fun facts, or omit them
 -GALLERY
     -[] Create gallery with pictures of Dave
     -[] Conditionally render either the image or a description upon click
