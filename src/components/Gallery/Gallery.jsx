@@ -8,7 +8,7 @@ const Gallery = () => {
   return (
     <div className='galleryItem'>
       <div className='gallery'>
-        Sir David Attenbowwow
+        Sir David Attenbowwow Gallery
       </div>
     </div>
   );

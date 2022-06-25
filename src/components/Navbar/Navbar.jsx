@@ -10,14 +10,17 @@ const Navbar = () => {
     <div className='navLinks'>
         <div>
             <Link className='navLink' to='/about'>
-                {/* <SiAboutDotMe /> */}
                 <span className='iconBtn'>About</span>
             </Link>
         </div>
         <div>
             <Link className='navLink' to='/gallery'>
-                {/* <FaPhoenixFramework /> */}
                 <span className='iconBtn'>Gallery</span>
+            </Link>
+        </div>
+        <div>
+            <Link className='navLink' to='/donate'>
+                <span className='iconBtn'>Donate</span>
             </Link>
         </div>
     </div>

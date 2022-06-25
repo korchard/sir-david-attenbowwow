@@ -9,21 +9,17 @@
 .navLink {
     text-decoration: none;
     padding: 10px;
-    color: black;
+    color: white;
+    font-weight: 900;
 }
 
 .navLink:hover {
-    /* color: rgb(243, 29, 118); */
-    color: white;
+    color: rgba(253,132,29,0.8225884103641457);
 }
 
 @media only screen and (max-width: 1300px) {
     .navLinks {
-        position: sticky;
-        top: 0;
-        right: 0;
-        padding-left: 3vh;
-        padding-bottom: 3vh;
+        display: inline;
     }
     .navLink {
         font-size: .9em;
@@ -33,12 +29,12 @@
 @media only screen and (max-width: 375px) {
     .navLinks {
         padding-left: 0;
+        padding-top: 1.5vh;
     }
 }
 
 @media only screen and (max-width: 280px) {
     .navLinks {
-        display: block;
-        text-align: center;
+        display: inline-flex;
     }
 }

@@ -5,8 +5,8 @@
     -[x] Change color scheme
 -HEADER
     -[x] Change background
-    -[] Change font
-    -[] 
+    -[x] Change font
+    -[x] Fix Navbar routes
 -FOOTER
     -[] Change contact info 
     -[] Add link to his instagram

@@ -1,8 +1,7 @@
 .headerItem {
     flex: auto;
-    /* display: inline-flex; */
-    height: auto;
-    background-image: url('/public/images/lake.jpg');
+    height: 15vh;
+    background-image: url('/public/images/bwca.jpg');
     background-position: center;
 }
 
@@ -16,7 +15,9 @@
 .header {
     font-size: 2em;
     font-family: 'Bebas Neue', cursive;
-    padding: 3vh;
+    color: white;
+    padding: 5vh;
+    margin-left: 2vh;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -35,7 +36,16 @@
     }
     .header {
         font-size: 1.3em;
+        padding: 6vh;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .header {
+        padding: 7vh;
+        text-align: center;
+        margin: 0;
     }
 }

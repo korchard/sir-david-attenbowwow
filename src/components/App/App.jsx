@@ -8,6 +8,7 @@ import {
 
 // COMPONENTS
 import About from '../About/About';
+import Donate from '../Donate/Donate';
 // import Footer from '../Footer/Footer';
 import Gallery from '../Gallery/Gallery';
 import Header from '../Header/Header';
@@ -35,6 +36,10 @@ function App() {
                 exact
                 path='/gallery'
                 component={Gallery}/>
+              <Route
+                exact
+                path='/donate'
+                component={Donate}/>
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1 className='error'>404</h1>} />
             </Switch>
