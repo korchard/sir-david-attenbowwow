@@ -31,23 +31,10 @@ const Footer = () => {
     <div className='footerItem'>
       <footer>
         <div className='contactInfo'>
-          <h2 className='contactHeader'>Reach me at </h2>
-          <GoMail className='contactIcon' />
-          &nbsp;
-          kimberly.a.orchard@gmail.com
-          <br></br>
-          <br></br>
-          <FiPhone className='contactIcon' />
-          &nbsp;
-          763-443-7105
-          <br></br>
-          <h2 className='contactHeader'>Or send a message here ----> </h2>
-        </div>
-        <div className='contactForm'>
-          <Contact />
-        </div>
-        <div className='links'>
-          <h2 className='footerName'>Kimberly Orchard</h2>
+          <h2 className='contactHeader'>Reach Davey at </h2>
+            <GoMail className='contactIcon' />
+            &nbsp;
+            sirdavidattenbowwow@gmail.com
           <div className='footerLinks'>
             <div>
                 <Link className='navLink' to='/work' onClick={linkedIn}>
@@ -61,6 +48,17 @@ const Footer = () => {
                     {/* <span className='iconBtn'></span> */}
                 </Link>
             </div>
+          </div>
+          <h2 className='contactHeader'>Or send a message here ----> </h2>
+        </div>
+        <div className='contactForm'>
+          <Contact />
+        </div>
+        <div className='links'>
+          <h2 className='footerName'>Directly donate to the environmental causes supported by Davey</h2>
+          <div className='footerLinks'>
+      
+           
           </div>
         </div>
       </footer>

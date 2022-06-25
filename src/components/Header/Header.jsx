@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className='headerItem'>
       {/* <div>
-        <img src='../images/logo.png' alt='logo' className='headerLogo'></img>
+        <img src='../images/Davey.png' alt='logo' className='headerLogo'></img>
       </div> */}
       <div className='header'>
         Sir David Attenbowwow

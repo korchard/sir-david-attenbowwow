@@ -61,11 +61,11 @@ footer {
     margin-right: 30px; */
 }
 
-.footerLinks {
+/* .footerLinks {
     display: inline-flex;
     position: absolute;
     right: 0;
-}
+} */
 
 @media only screen and (max-width: 1300px) {
     .footerItem {

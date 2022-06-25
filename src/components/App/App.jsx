@@ -8,7 +8,7 @@ import {
 
 // COMPONENTS
 import About from '../About/About';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import Gallery from '../Gallery/Gallery';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
@@ -38,7 +38,7 @@ function App() {
               {/* If none of the other routes matched, we will show a 404. */}
               <Route render={() => <h1 className='error'>404</h1>} />
             </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
   );
