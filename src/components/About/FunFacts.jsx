@@ -11,34 +11,34 @@ const FunFacts = () => {
             Fun Facts
         </div>
         <div className='factsContent'>
-            <p className='fact'>Location</p>
+            <p className='fact'>Favorite Toy</p>
                 <br></br>
-            <p>Minneapolis, MN</p>
+            <p>Zippy Paws Donuts</p>
         </div>
         <div className='factsContent'>
-            <p className='fact'>Superpower</p>
+            <p className='fact'>Favorite Food</p>
                 <br></br>
-            <p>Bridging gaps</p>
+            <p>Cheese</p>
         </div>
         <div className='factsContent'>
-            <p className='fact'>Reading</p>
+            <p className='fact'>Best Friend</p>
                 <br></br>
-            <p>The Midnight Library by Matt Haig</p>
+            <p>Luna, a German Shephard, Chihuahua mix</p>
         </div>
         <div className='factsContent'>
-            <p className='fact'>Favorite Word</p>
+            <p className='fact'>Arch Nemesis</p>
                 <br></br>
-            <p>Ecopsychology</p>
+            <p>Windshield Wipers</p>
         </div>
         <div className='factsContent'>
-            <p className='fact'>Current Creative Outlet</p>
+            <p className='fact'>Confidence Level</p>
                 <br></br>
-            <p>Refurbishing furniture</p>
+            <p>Out of this world</p>
         </div>
         <div className='factsContent'>
             <p className='fact'>Spirit Animal</p>
                 <br></br>
-            <p>Deer</p>
+            <p>Chicken</p>
         </div>
       </div>
   );

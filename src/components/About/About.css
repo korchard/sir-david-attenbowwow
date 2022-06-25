@@ -34,7 +34,6 @@
 }
 
 .aboutInfo {
-    /* border-right: 1px solid black; */
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -42,11 +41,6 @@
 .aboutImg {
     width: 270px;
     height: 360px;
-    /* align-items: center; */
-    /* border: 2px solid white; */
-    /* box-shadow: 2px 2px black; */
-    /* border-radius: 10px; */
-    /* margin: 30px; */
     float: right;
 
     /* for no radius and line between text & image */
@@ -87,21 +81,6 @@
     display: grid;
 }
 
-.BWCAImg {
-    width: 100%;
-    max-height: 25vh;
-}
-
-.BWCA {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 400;
-    text-align: center;
-    border-bottom: 1px solid black;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-bottom: 3vh;
-}
-
 @media only screen and (max-width: 1300px) {
     .aboutContent {
         font-size: .9em;
@@ -133,11 +112,6 @@
         padding: 0;
         /* margin: 10px; */
     }
-    /* .aboutInfo {
-        border-right: none;
-        padding-left: 0;
-        padding-right: 0;
-    } */
     .aboutFacts {
         margin: 0;
         margin-top: 30px;

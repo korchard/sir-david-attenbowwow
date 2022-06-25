@@ -16,74 +16,46 @@ const About = () => {
 
   return (
       <>
-    <div className='aboutItem'>
-      <div className='aboutContent'>
-          <div className='aboutHeader'>
-            I am &nbsp;
-            <AnimatedText />.
-          </div>
-          <div className='aboutBio'>
-            <img src='../images/daveySteamboat.jpg' alt='me' className='aboutImg'></img>
-            <p className='aboutInfo'>
-            Interested in all things yoga, Reiki, Ayurveda, circus, refurbishing furniture, 
-            wildness, and community building. If you want to discuss any of the above interests, 
-            and how the skills learned with these practices apply in other areas, please 
-            reach out.
-            <br></br>
-            <br></br>
-            Kimberly is a passionate woman whose areas of expertise include: communication and 
-            relationships. She is interested in elevating an eco-centered relationship with 
-            technology by supporting environmental causes, understanding the impact of technology 
-            on the human psyche, and growing and applying technology ethically. It is 
-            important to her to support organizations and projects that promote healing 
-            environmental practices, inspiration, and community building.
-            <br></br>
-            <br></br>
-            Recently, Kimberly rapidly developed her software skills while learning at Prime 
-            Digital Academy. She continued her education as an intern with F3 Wireless, learning 
-            embedded software. Her interest is to eventually become involved in more creative 
-            projects, and for now, she is curiously growing her web development skills.
-            <br></br>
-            <br></br>
-            Communication and interpersonal skills are high in her values system. She has 
-            worked with several organizations and trained in practices which support problem solving,
-            critical thinking, and leadership skills. Such as Radical Joy for Hard Times, the Windhorse Model, 
-            Non-violent communication, the Way of Council, Joanna Macy's grief and despair work, 
-            and Mark Coleman's ecotherapy practices.
-            <br></br>
-            <br></br>
-            In her free time she enjoys dancing, movement practices, cultivating space, and craftily 
-            making things up as she goes. More than the outcome, she simply enjoys working with 
-            materials, learning their properties and qualities, and later down the road applying 
-            what she knows in unique ways. 
-            </p>
-            {/* <img src='../images/me0.jpeg' alt='me' className='aboutImg'></img> */}
-          </div>
-      </div>
-        <FunFacts />
-    </div>
-    {/* <div className='BWCAContent'> */}
-        {/* {image ?
-            <img src='../images/BWCA2021.jpg' alt='Boundary Waters 2021' className='BWCAImg'
-                onClick={toggleImage}></img> :
-            <div className='BWCA' onClick={toggleImage}>
-                <p> */}
-                    {/* The Boundary Waters Canoe Area is a special place I visit annually. This
-                    photo was taken 2021 on Omega Lake.
-                    <br></br> */}
-                    {/* <br></br>
-                    "I know that I was born a creature but of a day, 
-                    <br></br>
-                    and when tangled stars in mind I trace,
-                    <br></br>
-                    I feast upon ambrosia,
-                    <br></br>
-                    nourished as the Gods themselves."
-                </p> 
-                <p>-Unknown Greek Poet</p>
+      <div className='aboutItem'>
+        <div className='aboutContent'>
+            <div className='aboutHeader'>
+              I am &nbsp;
+              <AnimatedText />.
             </div>
-        }   */}
-    {/* </div> */}
+            <div className='aboutBio'>
+              <img src='../images/daveySteamboat.jpg' alt='me' className='aboutImg'></img>
+              <p className='aboutInfo'>
+              Hello, friends! I am here to encourage you to consider your relationship to this 
+              beautiful planet that we exist within, to foster your own ecological identity, and 
+              choose to live in cooperation with and appreciation for our planet Earth. My namesake,
+              Sir David Attenborough, summarizes my hope succinctly:
+              <br></br>
+              <br></br>
+              "An understanding of the natural world is a source of not only great curiosity, 
+              but great fulfilment."
+              <br></br>
+              <br></br>
+              I reside in Minneapolis, MN with my paw-rents, Kimberly and Eddy, both of whom value 
+              living in reciprocity with Earth. They are continually working towards educating 
+              themselves around how they can be better stewards of this planet through growing their 
+              own food, catching their own water, developing passive solar heating, and generally 
+              trialing different ways to make their home more sustainable. This has influenced my 
+              own understanding and relationship to helping the planet. 
+              <br></br>
+              <br></br>
+              The way in which I can help is by continuing to bring awareness to organizations and 
+              causes that are supporting sustainability and conservation. 
+              <br></br>
+              <br></br>
+              Generally speaking, I am a sweet, opinionated, vocal fluff ball who loves to swim, 
+              ride in the boat while my paw-rents paddle, romp around in the underbrush, and 
+              adventure.
+              </p>
+            </div>
+        </div>
+          <FunFacts />
+      </div>
+        
     </>
   );
 };
