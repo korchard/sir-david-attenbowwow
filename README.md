@@ -8,10 +8,10 @@
     -[x] Change font
     -[x] Fix Navbar routes
 -FOOTER
-    -[] Change contact info 
-    -[] Add link to his instagram
-    -[] Make contact form larger
-    -[]
+    -[x] Change contact info 
+    -[x] Add link to his instagram
+    -[x] Change links to image
+    -[] Update Server for contact info with OAuth2
 -ABOUT
     -[x] Update about
     -[x] Change picture to one of me, Eddy, Dave

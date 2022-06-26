@@ -9,8 +9,8 @@ import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
 
 // SAGAS/REDUCER
-// import rootSaga from './redux/sagas/_root.saga';
-// import rootReducer from './redux/reducers/_root.reducer';
+import rootSaga from './redux/sagas/_root.saga';
+import rootReducer from './redux/reducers/_root.reducer';
 
 // IMPORT APP
 import App from './components/App/App';
@@ -31,11 +31,12 @@ const middlewareList = process.env.NODE_ENV === 'development' ?
 // STORE INSTANCE
 const store = createStore(
   // () => {}, --- use if no reducers needed
-  // rootReducer,
+  rootReducer,
   applyMiddleware(...middlewareList),
 );
 
-// sagaMiddleware.run(rootSaga);
+console.log(rootSaga);
+sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

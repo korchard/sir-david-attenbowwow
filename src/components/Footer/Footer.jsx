@@ -37,7 +37,7 @@ const Footer = () => {
                 @sir_david_attenbowwow
               </Link>
             </div>
-          <h2 className='contactHeader'>Or send a message here ----> </h2>
+          <h2 className='contactHeader'>Or send a message here ----{'>'} </h2>
         </div>
         <div className='contactForm'>
           <Contact />

@@ -1,12 +1,11 @@
-const portfolio = (state = [], action) => {
+const gallery = (state = [], action) => {
     switch (action.type) {
-      case 'SET_PORTFOLIO':
+      case 'SET_GALLERY':
         return action.payload;
       default:
         return state;
     }
   };
   
-  // portfolio will be on the redux state at:
-  // redux
-  export default portfolio;
+  // gallery will be on the redux state at: redux
+  export default gallery;

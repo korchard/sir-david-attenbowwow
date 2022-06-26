@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
-const contactRouter = require('./routes/contact.router');
-const portfolioRouter = require('./routes/portfolio.router');
+// const contactRouter = require('./routes/contact.router');
+const galleryRouter = require('./routes/gallery.router');
 
 // MIDDLEWARE
 app.use(bodyParser.json());
@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('build'));
 
 // ROUTES
-app.use('/api/contact', contactRouter);
-app.use('/api/portfolio', portfolioRouter);
+// app.use('/api/contact', contactRouter);
+app.use('/api/gallery', galleryRouter);
 
 // LISTEN
 app.listen(PORT, () => {
