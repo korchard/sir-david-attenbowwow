@@ -1,24 +1,6 @@
-## TODO:
--GENERAL
-    -[x] Change fonts
-    -[x] Change background
-    -[x] Change color scheme
--HEADER
-    -[x] Change background
-    -[x] Change font
-    -[x] Fix Navbar routes
--FOOTER
-    -[x] Change contact info 
-    -[x] Add link to his instagram
-    -[x] Change links to image
-    -[] Update Server for contact info with OAuth2
--ABOUT
-    -[x] Update about
-    -[x] Change picture to one of me, Eddy, Dave
-    -[x] Update fun facts, or omit them
--GALLERY
-    -[] Create gallery with pictures of Dave
-    -[] Conditionally render either the image or a description upon click
--ORGANIZATIONS/MERCH PAGE
-    -[] Create a component for merch page
-    -[] Include links to the organizations donation pages
+## TODO
+    -[] Update Server for contact info with OAuth2 for Davey's email.
+    -MERCH - for future
+        -[] Create a component for merch page.
+        -[] Strip/PayPal API.
+        -[] All proceeds go to buying Davey treatos and the listed organizations.

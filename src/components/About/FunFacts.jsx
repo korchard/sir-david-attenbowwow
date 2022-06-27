@@ -16,9 +16,9 @@ const FunFacts = () => {
             <p>Zippy Paws Donuts</p>
         </div>
         <div className='factsContent'>
-            <p className='fact'>Favorite Food</p>
+            <p className='fact'>Perfect Day</p>
                 <br></br>
-            <p>Cheese</p>
+            <p>Out on the boat</p>
         </div>
         <div className='factsContent'>
             <p className='fact'>Best Friend</p>
@@ -38,7 +38,7 @@ const FunFacts = () => {
         <div className='factsContent'>
             <p className='fact'>Spirit Animal</p>
                 <br></br>
-            <p>Chicken</p>
+            <p>Otter</p>
         </div>
       </div>
   );
