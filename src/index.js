@@ -1,9 +1,11 @@
 // REACT
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createRoot from 'react-dom/client';
 
 // REDUX
 import { createStore, applyMiddleware } from 'redux';
+import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
@@ -35,7 +37,13 @@ const store = createStore(
   applyMiddleware(...middlewareList),
 );
 
-console.log(rootSaga);
+// const store = configureStore(
+//   {reducer: {
+//     root: rootReducer
+//   }},
+//   applyMiddleware(...middlewareList),
+// )
+
 sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

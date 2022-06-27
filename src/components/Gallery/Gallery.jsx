@@ -23,7 +23,7 @@ useEffect(() => {
       <div className='galleryContent'>
         {gallery?.map((item) => {
             return (
-                <GalleryItem key={item.title} gallery={item}/>
+                <GalleryItem key={item.id} gallery={item} className="item"/>
                 );
             })}
       </div>
