@@ -22,7 +22,7 @@ const About = () => {
               <p className='aboutInfo'>
               Hello, friends! I am here to encourage you to consider your relationship to this 
               beautiful planet that we exist within, to foster your own ecological identity, and 
-              choose to live in cooperation with and appreciation for our planet Earth. My namesake,
+              choose to live in cooperation with, and appreciation for, our planet Earth. My namesake,
               Sir David Attenborough, summarizes my hope succinctly:
               <br></br>
               <br></br>

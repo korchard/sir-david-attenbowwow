@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 // STYLING
 import './Contact.css';
@@ -28,13 +28,13 @@ const Contact = () => {
           message: contact.message
         }
       });
-      // Swal.fire({
-      //   title: `Message Sent!`,
-      //   text: `Thank you for reaching out.`,
-      //   icon: 'success',
-      //   heightAuto: false,
-      //   confirmButtonText: 'OK',
-      // })
+      Swal.fire({
+        title: `Message Sent!`,
+        text: `Thank you for reaching out.`,
+        icon: 'success',
+        heightAuto: false,
+        confirmButtonText: 'OK',
+      })
       setContact({
         name: '', 
         email: '',

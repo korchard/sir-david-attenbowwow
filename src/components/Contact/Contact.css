@@ -52,7 +52,19 @@ textarea {
     background-color: rgba(7,0,156,0.7161458333333333);
 }
 
+.swal2 {
+    -webkit-tap-highlight-color: none;
+}
+.swal2-popup {
+    border-radius: 0;
+}
+
 .swal2-content {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+}
+
+button.swal2-styled.swal2-confirm {
+    /* background-color: rgba(253,132,29,0.8225884103641457); */
+    border-radius: 0;
 }

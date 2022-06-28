@@ -38,6 +38,8 @@
 .galleryItemHeader {
     font-size: 1.1em;
     font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Shadows Into Light', cursive;
+    font-size: 1.3em; */
     padding: 2vh;
 }
 
@@ -56,7 +58,6 @@
 }
 
 .galleryItemDescription {
-    /* font-size: .8em; */
     font-family: 'Montserrat', sans-serif;
     /* width: 250px; */
     height: 150px;
