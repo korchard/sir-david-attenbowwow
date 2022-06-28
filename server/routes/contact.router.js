@@ -1,17 +1,19 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-// const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email 
 router.post('/', (req, res) => {
     console.log('email', req.body);
-    // const data = req.body;
-    // const email = process.env.email;
-    // const password = process.env.password;
-    // const clientId = process.env.clientId;
-    // const clientSecret = process.env.clientSecret;
-    // const refreshToken = process.env.refreshToken;
+    const data = req.body;
+    const email = process.env.email;
+    const password = process.env.password;
+    const clientId = process.env.clientId;
+    const clientSecret = process.env.clientSecret;
+    const refreshToken = process.env.refreshToken;
+
+    console.log(email, password, clientId, clientSecret, refreshToken)
   
     // const smtpTransport = nodemailer.createTransport({
     //     host: 'smtp.gmail.com',
@@ -27,6 +29,18 @@ router.post('/', (req, res) => {
     //         refreshToken: refreshToken
     //     },
     // });
+
+    // let transporter = nodemailer.createTransport({
+    //     service: "gmail",
+    //     auth: {
+    //       type: "OAuth2",
+    //       user: process.env.EMAIL,
+    //       pass: process.env.WORD,
+    //       clientId: process.env.OAUTH_CLIENTID,
+    //       clientSecret: process.env.OAUTH_CLIENT_SECRET,
+    //       refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+    //     },
+    //    });
 
     // smtpTransport.verify(function(error, success) {
     //     if (error) {

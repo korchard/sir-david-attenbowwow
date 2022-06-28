@@ -6,7 +6,6 @@ function* getGallery () {
     try {
       const response = yield axios.get(`/api/gallery`);
       yield put({ type: 'SET_GALLERY', payload: response.data });
-      console.log(response.data);
     } catch (error) {
       console.log('Bad news bears...error in gallery.saga GET', error);
     }
