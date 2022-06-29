@@ -37,13 +37,6 @@ const store = createStore(
   applyMiddleware(...middlewareList),
 );
 
-// const store = configureStore(
-//   {reducer: {
-//     root: rootReducer
-//   }},
-//   applyMiddleware(...middlewareList),
-// )
-
 sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
