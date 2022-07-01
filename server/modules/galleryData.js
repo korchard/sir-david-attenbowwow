@@ -1,10 +1,12 @@
 const galleryData = [
     {   
         id: 1,
-        title: 'Visiting the Castle', 
-        description: `We took a road trip to Southern Missouri and Alabama and 
-        found this Castle. Of course, we needed a photo to validate my royalty.`, 
-        image: '../images/daveyAtCastle.jpg'
+        title: 'Davey on the Water', 
+        description: `I love spending time on the boat. We have a cabin on 
+        Middle Eau Claire Lake in Northern Wisconson. This lake has been cared 
+        for diligently by the DNR. They have eradicated invasive species and taken 
+        measures to ensure the ecosystem of the lake remains healthy. `, 
+        image: '../images/daveyOnBoat.jpg'
     }, 
     {
         id: 2,
@@ -23,21 +25,20 @@ const galleryData = [
     }, 
     {
         id: 4,
-        title: 'Visiting the Castle', 
-        description: `This is an image of Davey at the Castle in Missouri.`, 
-        image: '../images/daveyAtCastle.jpg'
+        title: 'Hiking in Wisconsin', 
+        description: `My grand-pawrents took me hiking when they were watching 
+        me for a few days. We visited the Trego Nature Trail along the Namekagon 
+        River.`, 
+        image: '../images/daveyHiking.jpeg'
     }, 
     {
         id: 5,
-        title: `Hiking in Sedona`, 
-        description: `Hiking the Cathedral Rock in Sedona.`, 
-        image: '../images/daveySedona.jpg'
-    }, 
-    {
-        id: 6,
-        title: 'The Volcano', 
-        description: `At the volcano and ice caves in New Mexico.`, 
-        image: '../images/daveyVolcano.jpg'
+        title: `Winter Walk in the North Woods`, 
+        description: `Winter is my favorite season. I love romping around in the 
+        snow and face diving into snow piles. My paw-rents like to get outside 
+        often during the winter months. Here we are walking through the North 
+        woods in Minnesota.`, 
+        image: '../images/daveyAtCabin.jpg'
     }, 
 ]; 
 
