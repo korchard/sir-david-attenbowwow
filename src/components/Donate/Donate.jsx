@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 // STYLING
 import './Donate.css';
 
 const Donate = () => {
+    const dispatch = useDispatch();
+    const org = useSelector((redux) => redux);
+
+  useEffect(() => {
+      dispatch({ type: 'GET_ORGANIZATIONS' });
+  }, [dispatch]);
 
   const coolEarth = () => {
     window.open('https://www.coolearth.org/donate/', '_blank');
