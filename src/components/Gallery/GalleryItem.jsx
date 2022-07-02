@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // STYLING
 import './Gallery.css';
 
 const GalleryItem = (props) => {
-//   const [image, setImage] = useState(true);
-
-//   const toggleImage = () => {
-//     setImage(!image)  
-//   }
 
   return (
     <div className='galleryItemItem'>
@@ -16,16 +11,10 @@ const GalleryItem = (props) => {
           {props.gallery?.title}
         </div>
         <div className='galleryItemContent'>
-            <img src={props.gallery?.image} alt='Davey Adventure' className='galleryItemPic'></img>
+            <img src={props.gallery?.image} alt={props.gallery?.title} className='galleryItemPic'></img>
             <p className='galleryItemDescription'>
                 {props.gallery?.description}</p>
         </div>
-        {/* {image ?
-          <img src={props.gallery?.image} alt='Davey Adventure' className='galleryItemPic'
-                onClick={toggleImage}></img> :
-          <p className='galleryItemDescription' onClick={toggleImage}>
-            {props.gallery?.description}</p> 
-        }   */}
     </div>
   );
 };
