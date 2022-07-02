@@ -11,7 +11,7 @@ function* getOrganizations () {
     }
 }
 
-function* organizationSaga() {
+function* organizationsSaga() {
   yield takeEvery('GET_ORGANIZATIONS', getOrganizations);
 }
 
