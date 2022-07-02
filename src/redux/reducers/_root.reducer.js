@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+
 const gallery = (state = [], action) => {
     switch (action.type) {
       case 'SET_GALLERY':
@@ -6,6 +8,21 @@ const gallery = (state = [], action) => {
         return state;
     }
   };
+
+const organizations = (state = [], action) => {
+  switch (action.type) {
+    case 'SET_ORGANIZATIONS':
+      return action.payload;
+    default:
+      return state;
+  }
+};
   
-  // gallery will be on the redux state at: redux
-  export default gallery;
+
+const rootReducer = combineReducers({
+  gallery,
+  organizations
+});
+
+// gallery will be on the redux state at: redux
+export default rootReducer;

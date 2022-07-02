@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { put, takeEvery } from 'redux-saga/effects';
 
-// GET ROUTE - to retrieve gallery info
+// GET ROUTE - to retrieve organization info
 function* getOrganizations () {
     try {
       const response = yield axios.get(`/api/organizations`);
@@ -15,4 +15,4 @@ function* organizationsSaga() {
   yield takeEvery('GET_ORGANIZATIONS', getOrganizations);
 }
 
-export default gallerySaga;
+export default organizationsSaga;
