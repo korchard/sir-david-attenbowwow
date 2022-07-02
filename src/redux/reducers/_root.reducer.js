@@ -24,5 +24,5 @@ const rootReducer = combineReducers({
   organizations
 });
 
-// gallery will be on the redux state at: redux
+// will be on the redux state at: redux
 export default rootReducer;

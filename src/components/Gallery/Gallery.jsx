@@ -9,7 +9,7 @@ import './Gallery.css';
 
 const Gallery = () => {
     const dispatch = useDispatch();
-    const gallery = useSelector((redux) => redux);
+    const gallery = useSelector((redux) => redux.gallery);
 
 useEffect(() => {
     dispatch({ type: 'GET_GALLERY' });

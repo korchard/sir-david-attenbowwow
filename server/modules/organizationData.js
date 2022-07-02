@@ -7,7 +7,7 @@ const organizationData = [
         to fund projects that create choice, tackle the root causes of deforestation 
         and protect vital carbon sinks. This is our mission. To back people, to 
         protect the rainforest and fight the climate crisis. `, 
-        link: 'coolEarth'
+        link: 'https://www.coolearth.org/donate/'
     }, 
     {
         id: 2,
@@ -17,7 +17,7 @@ const organizationData = [
         The commitment of these individuals is what will make the difference for the 
         future of nature. Through their leadership they inspire and mobilize communities, 
         organizations, governments, investors and the public at large.`, 
-        link: 'futureForNature'
+        link: 'https://futurefornature.org/donate'
     }, 
     {
         id: 3,
@@ -32,7 +32,7 @@ const organizationData = [
         It is led and funded by NMW. Today, NMW is the largest conservation organization 
         in Minnesota that focuses on protecting and preserving the Boundary Waters and 
         greater Quetico-Superior region.`, 
-        link: 'saveTheBoundaryWaters'
+        link: 'https://www.savetheboundarywaters.org/donate'
     }, 
     {
         id: 4,
@@ -40,7 +40,7 @@ const organizationData = [
         description: `Our mission is to improve people's lives by helping communities 
         protect, conserve, and manage the natural resources upon which their long-term 
         well-being depends.`, 
-        link: 'treesWaterPeople'
+        link: 'https://treeswaterpeople.org/donate'
     }, 
     {
         id: 5,
@@ -51,7 +51,7 @@ const organizationData = [
         the creation of reserves and provides permanent protection for habitats and wildlife. 
         Partnerships are developed with established and highly respected local 
         organisations who engage support and commitment among the local community.`, 
-        link: 'worldLandTrust'
+        link: 'https://www.worldlandtrust.org/product/action-fund/'
     }, 
     {
         id: 6,
@@ -61,7 +61,7 @@ const organizationData = [
         web that supports all life on Earth; to reduce humanity’s environmental footprint; 
         and to ensure the sustainable use of natural resources to support current 
         and future generations.`, 
-        link: 'worldWildlifeFund'
+        link: 'https://support.worldwildlife.org/site/SPageServer?pagename=main_monthly&s_src=AWE2209OQ18299A01179RX&s_subsrc=topnav'
     }, 
 ]; 
 
