@@ -7,7 +7,6 @@ import './Donate.css';
 const Organization = (props) => {
 
     const goToOrg = (link) => {
-        console.log('in function', link)
         window.open(encodeURI(link), '_blank');
       }
 
