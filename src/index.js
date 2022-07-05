@@ -1,11 +1,11 @@
 // REACT
 import React from 'react';
 import ReactDOM from 'react-dom';
-import createRoot from 'react-dom/client';
+// import createRoot from 'react-dom/client';
 
 // REDUX
 import { createStore, applyMiddleware } from 'redux';
-import { configureStore } from '@reduxjs/toolkit'
+// import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
