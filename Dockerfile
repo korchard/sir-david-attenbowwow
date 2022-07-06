@@ -1,12 +1,20 @@
-FROM node:16
+# pull official base image
+FROM node:16.2.0
 
-WORKDIR /usr/src/app
+# set working directory
+WORKDIR /app
 
-COPY package*.json ./
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-RUN npm install --legacy-peer-deps
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@5.0.1 -g --silent
 
-COPY . .
+# add app
+COPY . ./
 
-EXPOSE 8080
-CMD [ "npm", "start" ]
+# start app
+CMD ["npm", "start"]
