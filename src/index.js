@@ -1,6 +1,7 @@
 // REACT
 import React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 // REDUX
 import { createStore, applyMiddleware } from 'redux';
@@ -38,7 +39,7 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-const root = ReactDOMClient.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <App />
