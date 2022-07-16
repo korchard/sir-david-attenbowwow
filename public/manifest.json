@@ -3,7 +3,7 @@
   "name": "SirDavidAttenbowwow",
   "icons": [
     {
-      "src": "daveyLogo.png",
+      "src": "/images/daveyLogo.png",
       "type": "image/png",
       "sizes": "220x220"
     }
