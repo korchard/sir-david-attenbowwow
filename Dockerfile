@@ -1,20 +1,21 @@
-# pull official base image
+# pull base image
 FROM node:16.2.0
 
-# set working directory
+# make and set working directory.
+RUN mkdir -p /app
 WORKDIR /app
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@5.0.1 -g --silent
+COPY package*.json ./
+RUN npm install
 
 # add app
-COPY . ./
+COPY . /app
 
 # start app
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
+
+
