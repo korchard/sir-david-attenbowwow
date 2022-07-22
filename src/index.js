@@ -39,11 +39,19 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+// const root = createRoot(document.getElementById('root'));
+// root.render(
+//   <Provider store={store}>
+//     <App />
+//   </Provider>,
+// );
+ReactDOM.render(
+  <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
