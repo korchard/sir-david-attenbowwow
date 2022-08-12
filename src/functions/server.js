@@ -1,4 +1,5 @@
 // REQUIRED
+import awsServerlessExpressMiddleware from 'aws-serverless-express/middleware'
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -11,13 +12,26 @@ const organizationsRouter = require('./routes/organizations.router');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('build'));
+router.use(awsServerlessExpressMiddleware.eventContext())
+
+// BASE PATH
+const functionName = 'standalone-aws-serverless-express-example'
+const basePath = `/.netlify/functions/${functionName}/`
 
 // ROUTES
-app.use('/api/contact', contactRouter);
-app.use('/api/gallery', galleryRouter);
-app.use('/api/organizations', organizationsRouter);
+app.use(`${basePath}/api/contact`, contactRouter);
+app.use(`${basePath}/api/gallery`, galleryRouter);
+app.use(`${basePath}/api/organizations`, organizationsRouter);
 
 // LISTEN
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
 });
+
+// INITIALIZE AWS SERVERLESS EXPRESS
+const server = awsServerlessExpress.createServer(app, null, binaryMimeTypes)
+
+// LAMBDA HANDLER
+exports.handler = (event, context) => {
+  return awsServerlessExpress.proxy(server, event, context)
+}
