@@ -29,10 +29,10 @@
   },
   "main": "functions/server.js",
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve src/functions\"",
+    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve functions\"",
     "client": "react-scripts start",
     "server": "nodemon --watch server server/server.js",
-    "build": "concurrently \"react-script build\" \"netlify-lambda build src/functions\"",
+    "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:draft": "netlify deploy --dir=build --functions=functions",
