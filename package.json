@@ -41,7 +41,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "client": "react-scripts start",
-    "server": "nodemon --watch server server/server.js",
+    "server": "nodemon --watch server server/server.js"
 
   },
   "eslintConfig": {
