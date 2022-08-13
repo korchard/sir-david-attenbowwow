@@ -36,7 +36,7 @@
     "server": "nodemon --watch server server/server.js",
     "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
