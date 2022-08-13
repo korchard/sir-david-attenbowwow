@@ -37,8 +37,6 @@
     "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:draft": "netlify deploy --dir=build --functions=functions",
-    "deploy:prod": "netlify deploy --dir=build --functions=functions --prod"
   },
   "eslintConfig": {
     "extends": [
