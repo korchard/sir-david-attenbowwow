@@ -32,7 +32,7 @@
     "start": "concurrently \"react-scripts start\" \"node server/server.js\"",
     "client": "react-scripts start",
     "server": "nodemon --watch server server/server.js",
-    "build": "concurrently \"react-script build\" \"netlify-lambda build src/functions\"",
+    "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
