@@ -29,7 +29,6 @@
   },
   "main": "functions/server.js",
   "scripts": {
-    // "start": "concurrently \"react-scripts start\" \"node server/server.js\"",
     "start": "concurrently \"react-scripts start\" \"netlify-lambda serve src/functions\"",
     "client": "react-scripts start",
     "server": "nodemon --watch server server/server.js",
