@@ -41773,9 +41773,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static('build')); // ROUTES
 
-app.use('.netlify/functions/api/contact', contactRouter);
-app.use('.netlify/functions/api/gallery', galleryRouter);
-app.use('.netlify/functions/api/organizations', organizationsRouter); // LISTEN
+app.use('/api/contact', contactRouter);
+app.use('/api/gallery', galleryRouter);
+app.use('/api/organizations', organizationsRouter); // LISTEN
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
