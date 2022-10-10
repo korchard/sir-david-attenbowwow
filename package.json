@@ -31,10 +31,12 @@
   },
   "main": "functions/server.js",
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"netlify-lambda serve functions\"",
+    "start": "react-scripts start",
+    // "start": "concurrently \"react-scripts start\" \"netlify-lambda serve functions\"",
     "client": "react-scripts start",
     "server": "nodemon --watch server server/server.js",
-    "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
+    // "build": "concurrently \"react-script build\" \"netlify-lambda build functions\"",
+    "build": "react-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
