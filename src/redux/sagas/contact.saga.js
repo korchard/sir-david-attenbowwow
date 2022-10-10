@@ -4,7 +4,7 @@ import { takeEvery } from 'redux-saga/effects';
 // POST ROUTE - to send an email via nodemailer
 function* sendMessage (action) {
     try {
-      yield axios.post('/.netlify/functions/api/contact', action.payload);
+      yield axios.post('/api/contact', action.payload);
     } catch (error) {
       console.log('Bad news bears...error in contact.saga POST', error);
     }
