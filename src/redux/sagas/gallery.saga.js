@@ -4,7 +4,7 @@ import { put, takeEvery } from 'redux-saga/effects';
 // GET ROUTE - to retrieve gallery info
 function* getGallery () {
     try {
-      const response = yield axios.get(`/api/gallery`);
+      const response = yield axios.get(`/gallery`);
       yield put({ type: 'SET_GALLERY', payload: response.data });
     } catch (error) {
       console.log('Bad news bears...error in gallery.saga GET', error);
