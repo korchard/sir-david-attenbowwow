@@ -1,8 +1,11 @@
 require('dotenv').config();
+const serverless = require('serverless-http');
+const app = express();
+const router = express.Router();
 const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email 
-exports.handler = async function (event) {
+router.post('/', (req, res) => {
     console.log('email', req.body);
     const data = req.body;
 
@@ -45,4 +48,8 @@ exports.handler = async function (event) {
             }
             transporter.close();
     });
-};
+});
+
+app.use('/api/contact', router);
+
+module.exports.handler = serverless(app)
