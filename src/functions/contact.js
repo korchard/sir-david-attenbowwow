@@ -1,10 +1,8 @@
 require('dotenv').config();
-const express = require('express');
-const router = express.Router();
 const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email 
-router.post('/', (req, res) => {
+exports.handler = async function (event) {
     console.log('email', req.body);
     const data = req.body;
 
@@ -47,6 +45,4 @@ router.post('/', (req, res) => {
             }
             transporter.close();
     });
-});
-
-module.exports = router;
+};
