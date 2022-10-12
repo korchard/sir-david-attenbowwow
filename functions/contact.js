@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-router.post('/contact', (req, res) => {
+router.post('/', (req, res) => {
     console.log('email', req.body);
     const data = req.body;
 
