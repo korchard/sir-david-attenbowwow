@@ -52,4 +52,5 @@ router.post('/', (req, res) => {
 
 app.use('/api/contact', router);
 
+module.exports = app;
 module.exports.handler = serverless(app)
