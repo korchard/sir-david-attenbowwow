@@ -1,8 +1,12 @@
 require('dotenv').config();
 const serverless = require('serverless-http');
 const app = express();
+const bodyParser = require('body-parser');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
 router.post('/', (req, res) => {
