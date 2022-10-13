@@ -29,9 +29,21 @@
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 920px) {
+    .headerItem {
+        height: 20vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .header {
         font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .headerItem {
+        height: 15vh;
     }
 }
 
@@ -52,5 +64,6 @@
         padding: 7vh;
         text-align: center;
         margin: 0;
+        margin-left: 5%;
     }
 }

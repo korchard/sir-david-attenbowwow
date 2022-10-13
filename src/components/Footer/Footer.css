@@ -83,6 +83,9 @@ footer {
         right: auto;
         bottom: 10px;
     }
+    #daveyCool {
+        width: 120px;
+    }
     .footerName {
         padding-bottom: 5px;
     }

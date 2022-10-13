@@ -58,7 +58,10 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    .donateContent {
+    /* .donateContent {
+        font-size: .9em;
+    } */
+    .donateOrg {
         font-size: .9em;
     }
 }

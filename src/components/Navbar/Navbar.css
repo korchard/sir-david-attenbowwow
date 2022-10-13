@@ -18,11 +18,29 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    .navLinks {
+    /* .navLinks {
         display: inline;
-    }
+    } */
     .navLink {
         font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navLinks {
+        top: 5px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .navLinks {
+        right: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .navLinks {
+        display: inline;;
     }
 }
 
@@ -36,5 +54,6 @@
 @media only screen and (max-width: 280px) {
     .navLinks {
         display: inline-flex;
+        padding-right: 10%;
     }
 }
