@@ -59,11 +59,11 @@
 
 @media only screen and (max-width: 1300px) {
     .donateContent {
-        font-size: .9em;
+        font-size: .9rem;
     }
-    .donateOrg {
+    /* .donateOrg {
         font-size: .9em;
-    }
+    } */
 }
 
 @media only screen and (max-width: 760px) {
