@@ -82,9 +82,9 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    /* .aboutContent {
+    .aboutContent {
         font-size: .9em;
-    } */
+    }
     .aboutHeader {
         margin-left: 30px;
         font-size: .9em;
