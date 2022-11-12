@@ -1,36 +1,38 @@
 require('dotenv').config();
-const serverless = require('serverless-http');
-const app = express();
-const bodyParser = require('body-parser');
-const router = express.Router();
+// const serverless = require('serverless-http');
+// const app = express();
+// const bodyParser = require('body-parser');
+// const router = express.Router();
 const nodemailer = require('nodemailer');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-router.post('/', (req, res) => {
-    console.log('email', req.body);
-    const data = req.body;
+exports.handler = function(event, context) {
+    // router.post('/', (req, res) => {
+    console.log('email', event.body);
+    const data = event.body;
+    // const data = event
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          type: "OAuth2",
-          user: process.env.EMAIL,
-          pass: process.env.PASSWORD,
-          clientId: process.env.OAUTH_CLIENTID,
-          clientSecret: process.env.OAUTH_CLIENT_SECRET,
-          refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+        type: "OAuth2",
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+        clientId: process.env.OAUTH_CLIENTID,
+        clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
-       });
+    });
 
     transporter.verify((err, success) => {
         err
-          ? console.log(err)
-          : console.log(`=== Server is ready to take messages: ${success} ===`);
-       });
-  
+        ? console.log(err)
+        : console.log(`=== Server is ready to take messages: ${success} ===`);
+    });
+
     const mailOptions = {
         from: `${data.email}`,
         to: process.env.EMAIL,
@@ -45,10 +47,10 @@ router.post('/', (req, res) => {
     //     (error, response) => {
     //         if (error) {
     //             console.log(`Error - ${err}`);
-    //             res.send(error)
+    //             res.send(error, data)
     //         } else {
     //             console.log(`Success!`);
-    //             res.send(response)
+    //             res.send(response, data)
     //         }
     //         transporter.close();
     // });
@@ -60,6 +62,9 @@ router.post('/', (req, res) => {
         return {
             statusCode: 200,
             body: JSON.stringify({ "Success": response }, null),
+        //     headers: {
+        //        'Access-Control-Allow-Origin': '*',
+        //    },
         };    
         
     })
@@ -69,12 +74,16 @@ router.post('/', (req, res) => {
         return {
             statusCode: 500,
             body: JSON.stringify({ "Error": error }, null),
+        //     headers: {
+        //        'Access-Control-Allow-Origin': '*',
+        //    },
         };    
         
     })
-});
+    // });
+    // app.use('/api/contact', router);
+};
 
-app.use('/api/contact', router);
 
-module.exports = app;
-module.exports.handler = serverless(app)
+// module.exports = app;
+// module.exports.handler = serverless(app)
