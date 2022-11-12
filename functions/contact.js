@@ -54,9 +54,9 @@ exports.handler =  async function(event, context, callback) {
                 transporter.close();
         });
     });
+    app.use('/api/contact', router);
 };
 
-// app.use('/api/contact', router);
 
 // module.exports = app;
 // module.exports.handler = serverless(app)
