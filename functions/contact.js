@@ -46,10 +46,10 @@ exports.handler =  async function(event, context, callback) {
         (error, response) => {
             if (error) {
                 console.log(`Error - ${err}`);
-                res.send(error)
+                res.send(error, data)
             } else {
                 console.log(`Success!`);
-                res.send(response)
+                res.send(response, data)
             }
             transporter.close();
     });
