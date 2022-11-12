@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-exports.handler = async function(event, context) {
+exports.handler = function(event, context) {
     // router.post('/', (req, res) => {
     console.log('email', event.body);
     const data = event.body;
