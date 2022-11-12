@@ -61,7 +61,7 @@ exports.handler =  async function(event, context, callback) {
         
         return {
             statusCode: 200,
-            body: JSON.stringify({ "Success": results }, null),
+            body: JSON.stringify({ "Success": results, event }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
            },
@@ -73,7 +73,7 @@ exports.handler =  async function(event, context, callback) {
         
         return {
             statusCode: 500,
-            body: JSON.stringify({ "API Error": error }, null),
+            body: JSON.stringify({ "API Error": error, event }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
            },
