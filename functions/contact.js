@@ -1,6 +1,6 @@
 require('dotenv').config();
 // const serverless = require('serverless-http');
-// const app = express();
+const app = express();
 // const bodyParser = require('body-parser');
 const router = express.Router();
 const nodemailer = require('nodemailer');
