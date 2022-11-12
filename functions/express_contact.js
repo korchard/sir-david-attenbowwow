@@ -1,16 +1,15 @@
 require('dotenv').config();
-// const serverless = require('serverless-http');
-// const app = express();
-// const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
+const app = express();
+const bodyParser = require('body-parser');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-exports.handler = async function (req, res) {
-// router.post('/', (req, res) => {
+router.post('/', (req, res) => {
     console.log('email', req.body);
     const data = req.body;
 
@@ -53,9 +52,9 @@ exports.handler = async function (req, res) {
             }
             transporter.close();
     });
-};
+});
 
-// app.use('/api/contact', router);
+app.use('/api/contact', router);
 
-// module.exports = app;
-// module.exports.handler = serverless(app)
+module.exports = app;
+module.exports.handler = serverless(app)
