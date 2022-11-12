@@ -62,10 +62,9 @@ exports.handler = function(event, context) {
         return {
             statusCode: 200,
             body: JSON.stringify({ "Success": response }, null),
-            headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': 'true',
-           },
+        //     headers: {
+        //        'Access-Control-Allow-Origin': '*',
+        //    },
         };    
         
     })
@@ -75,10 +74,9 @@ exports.handler = function(event, context) {
         return {
             statusCode: 500,
             body: JSON.stringify({ "Error": error }, null),
-            headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': 'true',
-           },
+        //     headers: {
+        //        'Access-Control-Allow-Origin': '*',
+        //    },
         };    
         
     })
