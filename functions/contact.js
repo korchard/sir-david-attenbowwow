@@ -64,6 +64,7 @@ exports.handler = function(event, context) {
             body: JSON.stringify({ "Success": response }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
+               'Access-Control-Allow-Credentials': 'true',
            },
         };    
         
@@ -76,6 +77,7 @@ exports.handler = function(event, context) {
             body: JSON.stringify({ "Error": error }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
+               'Access-Control-Allow-Credentials': 'true',
            },
         };    
         
