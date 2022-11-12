@@ -11,8 +11,8 @@ const nodemailer = require('nodemailer');
 // NODEMAILER && POST ROUTE to receive an email 
 exports.handler =  async function(event, context, callback) {
     // router.post('/', (req, res) => {
-    console.log('email', req.body);
-    const data = req.body;
+    console.log('email', event.body);
+    const data = event.body;
     // const data = event
 
     let transporter = nodemailer.createTransport({
