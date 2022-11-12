@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-exports.handler =  async function(event, context, callback) {
+exports.handler = async function(event, context) {
     // router.post('/', (req, res) => {
     console.log('email', event.body);
     const data = event.body;
@@ -55,13 +55,13 @@ exports.handler =  async function(event, context, callback) {
     //         transporter.close();
     // });
     transporter.sendMail(mailOptions)
-    .then( results => {
+    .then( response => {
 
-        console.log(`Success - ${results}`);
+        console.log(`Success - ${response}`);
         
         return {
             statusCode: 200,
-            body: JSON.stringify({ "Success": results, event }, null),
+            body: JSON.stringify({ "Success": response }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
            },
@@ -73,7 +73,7 @@ exports.handler =  async function(event, context, callback) {
         
         return {
             statusCode: 500,
-            body: JSON.stringify({ "API Error": error, event }, null),
+            body: JSON.stringify({ "Error": error }, null),
             headers: {
                'Access-Control-Allow-Origin': '*',
            },
