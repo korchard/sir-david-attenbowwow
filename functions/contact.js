@@ -53,7 +53,7 @@ export async function handler(event, context) {
         //         }
         //         transporter.close();
         // });
-        transporter.sendMail(mailOptions)
+        let result = await transporter.sendMail(mailOptions)
         .then( response => {
 
             console.log(`Success - ${response}`);
