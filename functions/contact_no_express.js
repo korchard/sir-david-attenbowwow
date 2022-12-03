@@ -34,7 +34,7 @@ exports.handler = async function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    return transporter.sendMail(mailOptions)
+    let result = await transporter.sendMail(mailOptions)
     // return {
     //     statusCode: 200,
     //     body: JSON.stringify({

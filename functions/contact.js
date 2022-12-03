@@ -10,15 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-// function handler(event, context) {
-    // const app = express();
-    // const bodyParser = require('body-parser');
-    // const router = express.Router();
-    // const nodemailer = require('nodemailer');
-
-    // app.use(bodyParser.json());
-    // app.use(bodyParser.urlencoded({ extended: true }));
-
 router.post('/', async (req, res) => {
     console.log('email', req.body);
     const data = req.body;
@@ -50,18 +41,7 @@ router.post('/', async (req, res) => {
                 ${data.name}</p>
                 <p>${data.email}</p>`
     };
-
-    // transporter.sendMail(mailOptions,
-    //     (error, response) => {
-    //         if (error) {
-    //             console.log(`Error - ${err}`);
-    //             res.send(error)
-    //         } else {
-    //             console.log(`Success!`);
-    //             res.send(response)
-    //         }
-    //         transporter.close();
-    // });
+    
     let result = await transporter.sendMail(mailOptions)
     .then( response => {
 
