@@ -5,7 +5,8 @@ import { takeEvery } from 'redux-saga/effects';
 function* sendMessage (action) {
     try {
       yield axios.post('/api/contact', action.payload);
-      console.log(response.data)
+      yield ({ payload: response.data });
+      console.log(payload)
     } catch (error) {
       console.log('Bad news bears...error in contact.saga POST', error);
     }
