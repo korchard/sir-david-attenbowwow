@@ -35,11 +35,11 @@ export async function handler(event, context) {
             },
         });
 
-        transporter.verify((err, success) => {
-            err
-            ? console.log(err)
-            : console.log(`=== Server is ready to take messages: ${success} ===`);
-        });
+        // transporter.verify((err, success) => {
+        //     err
+        //     ? console.log(err)
+        //     : console.log(`=== Server is ready to take messages: ${success} ===`);
+        // });
     
         const mailOptions = {
             from: `${data.email}`,
