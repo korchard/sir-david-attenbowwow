@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
-export async function handler(event, context) {
+export function handler(event, context) {
     // const app = express();
     // const bodyParser = require('body-parser');
     // const router = express.Router();
@@ -19,7 +19,7 @@ export async function handler(event, context) {
     // app.use(bodyParser.json());
     // app.use(bodyParser.urlencoded({ extended: true }));
 
-    router.post('/', (req, res) => {
+    router.post('/', async (req, res) => {
         console.log('email', event.body);
         const data = event.body;
 
