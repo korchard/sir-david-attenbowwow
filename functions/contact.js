@@ -20,8 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
     // app.use(bodyParser.urlencoded({ extended: true }));
 
 router.post('/', async (req, res) => {
-    console.log('email', event.body);
-    const data = event.body;
+    console.log('email', req.body);
+    const data = req.body;
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
