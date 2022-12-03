@@ -62,7 +62,7 @@ router.post('/', (req, res) => {
     //         }
     //         transporter.close();
     // });
-    return transporter.sendMail(mailOptions)
+    let result = transporter.sendMail(mailOptions)
     .then( response => {
 
         console.log(`Success - ${response}`);
@@ -82,6 +82,7 @@ router.post('/', (req, res) => {
         };    
         
     })
+    res.send(result)
 });
 
 // app.use('/api/contact', router)
