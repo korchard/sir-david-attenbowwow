@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
     .catch ( error => {
         return {
             statusCode: 500,
-            body: JSON.stringify({ "Error": error, req }, null),
+            body: JSON.stringify({ "Error": error }, null),
         };    
     })
     res.send(result)
