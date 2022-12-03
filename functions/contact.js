@@ -42,14 +42,12 @@ router.post('/', async (req, res) => {
             statusCode: 200,
             body: JSON.stringify({ "Success": response }, null),
         };    
-        
     })
     .catch ( error => {
         return {
             statusCode: 500,
             body: JSON.stringify({ "Error": error, req }, null),
         };    
-        
     })
     res.send(result)
 });
