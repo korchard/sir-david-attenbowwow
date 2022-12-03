@@ -90,18 +90,6 @@ export async function handler(event, context) {
     })
 }
 
-import express from 'express'
-import {Router} from 'express'
-import serverless from 'serverless-http'
-export async function handler(event, context) {
-  const app = express()
-  const router = Router()
-  api.use('/api/contact', router)
-  return serverless(app)(event, context).then(result => {
-    return result
-  })
-}
-
 // app.use('/api/contact', router);
 
 // module.exports = app;
