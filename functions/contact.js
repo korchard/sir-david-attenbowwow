@@ -17,20 +17,14 @@ router.post('/', async (req, res) => {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-        type: "OAuth2",
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-        clientId: process.env.OAUTH_CLIENTID,
-        clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+            type: "OAuth2",
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+            clientId: process.env.OAUTH_CLIENTID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
     });
-
-    // transporter.verify((err, success) => {
-    //     err
-    //     ? console.log(err)
-    //     : console.log(`=== Server is ready to take messages: ${success} ===`);
-    // });
 
     const mailOptions = {
         from: `${data.email}`,
@@ -44,9 +38,6 @@ router.post('/', async (req, res) => {
     
     let result = await transporter.sendMail(mailOptions)
     .then( response => {
-
-        console.log(`Success - ${response}`);
-        
         return {
             statusCode: 200,
             body: JSON.stringify({ "Success": response }, null),
@@ -54,11 +45,9 @@ router.post('/', async (req, res) => {
         
     })
     .catch ( error => {
-        console.log(`Error - ${error}`);
-        
         return {
             statusCode: 500,
-            body: JSON.stringify({ "Error": error }, null),
+            body: JSON.stringify({ "Error": error, req }, null),
         };    
         
     })

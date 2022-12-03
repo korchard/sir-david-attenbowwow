@@ -9,20 +9,14 @@ exports.handler = async function(event, context) {
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-        type: "OAuth2",
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-        clientId: process.env.OAUTH_CLIENTID,
-        clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+            type: "OAuth2",
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
+            clientId: process.env.OAUTH_CLIENTID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
     });
-
-    // transporter.verify((err, success) => {
-    //     err
-    //     ? console.log(err)
-    //     : console.log(`=== Server is ready to take messages: ${success} ===`);
-    // });
 
     const mailOptions = {
         from: `${data.email}`,
@@ -34,7 +28,7 @@ exports.handler = async function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    let result = await transporter.sendMail(mailOptions)
+    return transporter.sendMail(mailOptions)
     // return {
     //     statusCode: 200,
     //     body: JSON.stringify({
@@ -55,8 +49,7 @@ exports.handler = async function(event, context) {
                'Access-Control-Allow-Origin': '*',
                'Access-Control-Allow-Credentials': true,
            },
-        };    
-        
+        };          
     })
     .catch ( error => {
         console.log(`Error - ${error}`);
@@ -69,6 +62,5 @@ exports.handler = async function(event, context) {
                'Access-Control-Allow-Credentials': true,
            },
         };    
-        
     })
 };
