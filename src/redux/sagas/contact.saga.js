@@ -3,6 +3,7 @@ import { takeEvery } from 'redux-saga/effects';
 
 // POST ROUTE - to send an email via nodemailer
 function* sendMessage (action) {
+  console.log('in saga', action.payload)
     try {
       yield axios.post('/api/contact', action.payload);
     } catch (error) {

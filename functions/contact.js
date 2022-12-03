@@ -2,7 +2,7 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email 
-exports.handler = function(event, context) {
+exports.handler = async function(event, context) {
     console.log('email', event.body);
     const data = event.body;
 
@@ -34,32 +34,43 @@ exports.handler = function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    return transporter.sendMail(mailOptions)
-    .then( response => {
+    let results = await transporter.sendMail(mailOptions)
+    console.log("Result:", result);
+  
+    return {
+        statusCode: 200,
+        body: JSON.stringify({
+            "Success": results
+        }, null),
+        headers: {
+           'Access-Control-Allow-Origin': '*',
+       },
+    };
+    // .then( response => {
 
-        console.log(`Success - ${response}`);
+    //     console.log(`Success - ${response}`);
         
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ "Success": response }, null),
-            headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': true,
-           },
-        };    
+    //     return {
+    //         statusCode: 200,
+    //         body: JSON.stringify({ "Success": response }, null),
+    //         headers: {
+    //            'Access-Control-Allow-Origin': '*',
+    //            'Access-Control-Allow-Credentials': true,
+    //        },
+    //     };    
         
-    })
-    .catch ( error => {
-        console.log(`Error - ${error}`);
+    // })
+    // .catch ( error => {
+    //     console.log(`Error - ${error}`);
         
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ "Error": error }, null),
-            headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': true,
-           },
-        };    
+    //     return {
+    //         statusCode: 500,
+    //         body: JSON.stringify({ "Error": error }, null),
+    //         headers: {
+    //            'Access-Control-Allow-Origin': '*',
+    //            'Access-Control-Allow-Credentials': true,
+    //        },
+    //     };    
         
-    })
+    // })
 };
