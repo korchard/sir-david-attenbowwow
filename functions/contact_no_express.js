@@ -1,19 +1,10 @@
 require('dotenv').config();
-// const serverless = require('serverless-http');
-// const app = express();
-// const bodyParser = require('body-parser');
-// const router = express.Router();
 const nodemailer = require('nodemailer');
-
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
 exports.handler = function(event, context) {
-    // router.post('/', (req, res) => {
     console.log('email', event.body);
     const data = event.body;
-    // const data = event
 
     let transporter = nodemailer.createTransport({
         service: "gmail",
@@ -27,11 +18,11 @@ exports.handler = function(event, context) {
         },
     });
 
-    transporter.verify((err, success) => {
-        err
-        ? console.log(err)
-        : console.log(`=== Server is ready to take messages: ${success} ===`);
-    });
+    // transporter.verify((err, success) => {
+    //     err
+    //     ? console.log(err)
+    //     : console.log(`=== Server is ready to take messages: ${success} ===`);
+    // });
 
     const mailOptions = {
         from: `${data.email}`,
@@ -43,18 +34,7 @@ exports.handler = function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    // transporter.sendMail(mailOptions,
-    //     (error, response) => {
-    //         if (error) {
-    //             console.log(`Error - ${err}`);
-    //             res.send(error, data)
-    //         } else {
-    //             console.log(`Success!`);
-    //             res.send(response, data)
-    //         }
-    //         transporter.close();
-    // });
-    transporter.sendMail(mailOptions)
+    return transporter.sendMail(mailOptions)
     .then( response => {
 
         console.log(`Success - ${response}`);
@@ -62,9 +42,9 @@ exports.handler = function(event, context) {
         return {
             statusCode: 200,
             body: JSON.stringify({ "Success": response }, null),
-        //     headers: {
-        //        'Access-Control-Allow-Origin': '*',
-        //    },
+            headers: {
+               'Access-Control-Allow-Origin': '*',
+           },
         };    
         
     })
@@ -74,16 +54,10 @@ exports.handler = function(event, context) {
         return {
             statusCode: 500,
             body: JSON.stringify({ "Error": error }, null),
-        //     headers: {
-        //        'Access-Control-Allow-Origin': '*',
-        //    },
+            headers: {
+               'Access-Control-Allow-Origin': '*',
+           },
         };    
         
     })
-    // });
-    // app.use('/api/contact', router);
 };
-
-
-// module.exports = app;
-// module.exports.handler = serverless(app)
