@@ -28,39 +28,15 @@ exports.handler = async function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    return transporter.sendMail(mailOptions)
-    // return {
-    //     statusCode: 200,
-    //     body: JSON.stringify({
-    //         "Success": results
-    //     }, null),
-    //     headers: {
-    //        'Access-Control-Allow-Origin': '*',
-    //    },
-    // };
-    .then( response => {
-
-        console.log(`Success - ${response}`);
-        
+    let result = await transporter.sendMail(mailOptions)
         return {
             statusCode: 200,
-            body: JSON.stringify({ "Success": response }, null),
+            body: JSON.stringify({
+                "Success": result
+            }, null),
             headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': true,
-           },
-        };          
-    })
-    .catch ( error => {
-        console.log(`Error - ${error}`);
-        
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ "Error": error }, null),
-            headers: {
-               'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials': true,
-           },
-        };    
-    })
+                'Access-Control-Allow-Origin': '*',
+            },
+        };
+    
 };
