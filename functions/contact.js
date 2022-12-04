@@ -11,27 +11,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // NODEMAILER && POST ROUTE to receive an email 
 router.post('/', async (req, res) => {
-    console.log('email', req.body);
     const data = req.body;
 
     let transporter = nodemailer.createTransport({
-        // service: "gmail",
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
+        service: "gmail",
+        host: 'smtp.gmail.com',
+        secure: false,
         auth: {
-            type: "OAuth2",
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD,
-            clientId: process.env.OAUTH_CLIENTID,
-            clientSecret: process.env.OAUTH_CLIENT_SECRET,
-            refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-        },
+            user: process.env.APP_EMAIL,
+            pass: process.env.APP_PASS
+        }
+        // auth: {
+        //     type: "OAuth2",
+        //     user: process.env.EMAIL,
+        //     pass: process.env.PASSWORD,
+        //     clientId: process.env.OAUTH_CLIENTID,
+        //     clientSecret: process.env.OAUTH_CLIENT_SECRET,
+        //     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
+        // },
     });
 
     const mailOptions = {
         from: `${data.email}`,
-        to: `kimberly.a.orchard@gmail.com`,
+        to: `sirdavidattenbowwow@gmail.com`,
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
