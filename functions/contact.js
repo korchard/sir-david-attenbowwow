@@ -13,13 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 router.post('/', async (req, res) => {
     const data = req.body;
 
-    let transporter = nodemailer.createTransport(smtpTransport({
+    let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: process.env.APP_EMAIL,
             pass: process.env.APP_PASS
         }
-    }));
+    });
 
     const mailOptions = {
         from: `${data.email}`,
