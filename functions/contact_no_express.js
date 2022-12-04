@@ -7,9 +7,9 @@ exports.handler = async function(event, context) {
     const data = event.body;
 
     let transporter = nodemailer.createTransport({
-        service: "gmail",
+        service: 'gmail',
         auth: {
-            type: "OAuth2",
+            type: 'OAuth2',
             user: process.env.EMAIL,
             pass: process.env.PASSWORD,
             clientId: process.env.OAUTH_CLIENTID,
@@ -32,7 +32,7 @@ exports.handler = async function(event, context) {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                "Success": result
+                'Success': result
             }, null),
             headers: {
                 'Access-Control-Allow-Origin': '*',
