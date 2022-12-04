@@ -24,6 +24,10 @@ router.post('/', async (req, res) => {
             clientSecret: process.env.OAUTH_CLIENT_SECRET,
             refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
+        secureConnection: false,
+        tls: {
+            rejectUnauthorized: false
+        }
     });
 
     const mailOptions = {
