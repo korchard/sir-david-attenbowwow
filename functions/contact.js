@@ -15,9 +15,10 @@ router.post('/', async (req, res) => {
     const data = req.body;
 
     let transporter = nodemailer.createTransport({
-        service: "gmail",
-        host: 'smtp.gmail.com',
-        port: '587',
+        // service: "gmail",
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
             type: "OAuth2",
             user: process.env.EMAIL,
@@ -26,15 +27,11 @@ router.post('/', async (req, res) => {
             clientSecret: process.env.OAUTH_CLIENT_SECRET,
             refreshToken: process.env.OAUTH_REFRESH_TOKEN,
         },
-        secureConnection: false,
-        tls: {
-            rejectUnauthorized: false
-        }
     });
 
     const mailOptions = {
         from: `${data.email}`,
-        to: `sirdavidattenbowwow@gmail.com`,
+        to: process.env.EMAIL,
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
