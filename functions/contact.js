@@ -27,8 +27,8 @@ router.post('/', async (req, res) => {
     });
 
     const mailOptions = {
-        from: `<${data.email}>`,
-        to: `<${process.env.EMAIL}>`,
+        from: `${data.email}`,
+        to: `sirdavidattenbowwow@gmail.com`,
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
