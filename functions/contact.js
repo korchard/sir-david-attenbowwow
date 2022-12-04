@@ -13,23 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 router.post('/', async (req, res) => {
     const data = req.body;
 
-    let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
+    let transporter = nodemailer.createTransport(smtpTransport({
+        service: 'gmail',
         auth: {
             user: process.env.APP_EMAIL,
             pass: process.env.APP_PASS
         }
-        // auth: {
-        //     type: "OAuth2",
-        //     user: process.env.EMAIL,
-        //     pass: process.env.PASSWORD,
-        //     clientId: process.env.OAUTH_CLIENTID,
-        //     clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        //     refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-        // },
-    });
+    }));
 
     const mailOptions = {
         from: `${data.email}`,
@@ -45,13 +35,13 @@ router.post('/', async (req, res) => {
     .then( response => {
         return {
             statusCode: 200,
-            body: JSON.stringify({ "Success": response }, null),
+            body: JSON.stringify({ 'Success': response }, null),
         };    
     })
     .catch ( error => {
         return {
             statusCode: 500,
-            body: JSON.stringify({ "Error": error }, null),
+            body: JSON.stringify({ 'Error': error }, null),
         };    
     })
     res.send(result)
