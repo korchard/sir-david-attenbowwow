@@ -19,7 +19,7 @@ exports.handler = async function(event, context) {
     });
 
     const mailOptions = {
-        from: `${data.email}`,
+        from: process.env.EMAIL,
         to: process.env.EMAIL,
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
