@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 // NODEMAILER && POST ROUTE to receive an email 
 exports.handler = async function(event, context) {
     console.log('email', event.body);
-    const data = event.body;
+    const data = JSON.parse(event.body);
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -28,7 +28,8 @@ exports.handler = async function(event, context) {
                 <p>${data.email}</p>`
     };
 
-    let result = await transporter.sendMail(mailOptions)
+    try {
+        let result = await transporter.sendMail(mailOptions);
         return {
             statusCode: 200,
             body: JSON.stringify({
@@ -38,5 +39,15 @@ exports.handler = async function(event, context) {
                 'Access-Control-Allow-Origin': '*',
             },
         };
-    
+    } catch (error) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({
+                'Error': error
+            }, null),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        };
+    }
 };

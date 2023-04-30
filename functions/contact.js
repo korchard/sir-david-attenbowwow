@@ -1,59 +1,37 @@
 require('dotenv').config();
-const express = require('express');
-const serverless = require('serverless-http');
-const app = express();
-const bodyParser = require('body-parser');
-const router = express.Router();
 const nodemailer = require('nodemailer');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+exports.handler = async (event, context) => {
+  const data = JSON.parse(event.body);
 
-// NODEMAILER && POST ROUTE to receive an email 
-router.post('/', async (req, res) => {
-    const data = req.body;
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
+  });
 
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.APP_EMAIL,
-            pass: process.env.PASSWORD
-        }
-    });
-
-    const mailOptions = {
-        from: `${data.email}`,
-        to: process.env.APP_EMAIL,
-        subject: `${data.subject}`,
-        html: `<p>${data.message}</p>
+  const mailOptions = {
+    from: `${data.email}`,
+    to: process.env.EMAIL,
+    subject: `${data.subject}`,
+    html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
                 ${data.name}</p>
                 <p>${data.email}</p>`
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Email sent successfully' })
     };
-    
-    let result = await transporter.sendMail(mailOptions)
-    .then( response => {
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ 'Success': response }, null),
-        };    
-    })
-    .catch ( error => {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ 'Error': error }, null),
-        };    
-    })
-    res.send(result)
-});
-
-// app.use('/api/contact', router)
-// return serverless(app)(event, context).then(result => {
-//     return result
-// })
-// }
-
-app.use('/api/contact', router);
-
-module.exports = app;
-module.exports.handler = serverless(app)
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message })
+    };
+  }
+};

@@ -24,15 +24,17 @@ const galleryData = [
         description: `I love spending time on the boat. We have a cabin on 
         Middle Eau Claire Lake in Northern Wisconson. This lake has been cared 
         for diligently by the DNR. They have eradicated invasive species and taken 
-        measures to ensure the ecosystem of the lake remains healthy.`, 
+        measures to ensure the ecosystem of the lake remains healthy. It's my favorite 
+        swimming spot.`, 
         image: '../images/daveyOnBoat.jpg'
     }, 
     {
         id: 4,
         title: `Hiking in Sedona`, 
         description: `We hiked a few different places while visiting Sedona. My 
-        parents call me a Billy Goat, as I like to scurry up the rocks without 
-        any hesitation. This picture was taken hiking Cathedral Rock.`, 
+        paw-rents call me a Billy Goat, as I like to scurry up the rocks without 
+        any hesitation. This picture was taken hiking Cathedral Rock, which was a bit 
+        steep and I needed to ride in the backpack.`, 
         image: '../images/daveySedona.jpg'
     }, 
     {
@@ -45,9 +47,9 @@ const galleryData = [
     {
         id: 6,
         title: 'Hiking in Wisconsin', 
-        description: `My grand-pawrents took me hiking when they were watching 
+        description: `My grand-paw-rents took me hiking when they were watching 
         me for a few days. We visited the Trego Nature Trail along the Namekagon 
-        River.`, 
+        River. I love my grand-paw-rents! They spoil me.`, 
         image: '../images/daveyHiking.jpeg'
     }, 
     {

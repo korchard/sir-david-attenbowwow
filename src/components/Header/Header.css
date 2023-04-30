@@ -1,8 +1,14 @@
 .headerItem {
     flex: auto;
     height: 15vh;
-    background-image: url('/public/images/bwca.jpg');
+    /* background-image: url('/public/images/bwca.jpg'); */
     background-position: center;
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+        ),
+        url('/public/images/bwca.jpg')
 }
 
 .headerLogo {

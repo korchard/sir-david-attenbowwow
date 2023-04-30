@@ -28,7 +28,7 @@ const FunFacts = () => {
         <div className='factsContent'>
             <p className='fact'>Arch Nemesis</p>
                 <br></br>
-            <p>Windshield Wipers</p>
+            <p>Windshield Wipers and the alley cats</p>
         </div>
         <div className='factsContent'>
             <p className='fact'>Nick Names</p>
