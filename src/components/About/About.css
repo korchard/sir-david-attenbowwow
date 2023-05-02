@@ -36,7 +36,6 @@
 .aboutInfo {
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 1em;
 }
 
 .aboutImg {
@@ -85,6 +84,10 @@
 @media only screen and (max-width: 1300px) {
     .aboutContent {
         font-size: .9em;
+    }
+    .aboutInfo {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     }
     .aboutHeader {
         margin-left: 30px;
