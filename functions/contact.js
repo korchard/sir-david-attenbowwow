@@ -6,6 +6,18 @@ exports.handler = async function(event, context) {
     console.log('email', event.body);
     const data = JSON.parse(event.body);
 
+    if (!event.body) {
+        return {
+          statusCode: 400,
+          body: JSON.stringify({
+            'Error': 'Missing request body'
+          }),
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+        };
+      }
+
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -40,6 +52,7 @@ exports.handler = async function(event, context) {
             },
         };
     } catch (error) {
+        console.log(error.message)
         return {
             statusCode: 500,
             body: JSON.stringify({
