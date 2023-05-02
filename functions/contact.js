@@ -3,20 +3,7 @@ const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email 
 exports.handler = async function(event, context) {
-    console.log('email', event.body);
     const data = JSON.parse(event.body);
-
-    if (!event.body) {
-        return {
-          statusCode: 400,
-          body: JSON.stringify({
-            'Error': 'Missing request body'
-          }),
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },
-        };
-      }
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',

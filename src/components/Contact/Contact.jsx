@@ -18,7 +18,6 @@ const Contact = () => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    console.log('message', contact);
       dispatch({
         type: 'SEND_MESSAGE',
         payload: {
