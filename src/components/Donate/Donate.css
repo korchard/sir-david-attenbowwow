@@ -56,6 +56,8 @@
 @media only screen and (max-width: 1300px) {
     .donateContent {
         font-size: .9rem;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     }
 }
 
