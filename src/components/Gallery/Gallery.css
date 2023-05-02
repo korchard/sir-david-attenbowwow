@@ -28,7 +28,6 @@
 
 .galleryItemItem {
     width: 50%;
-    /* height: 330px; */
     height: auto;
     margin: auto;
     border-bottom: 1px solid black;
@@ -38,8 +37,6 @@
 .galleryItemHeader {
     font-size: 1.1em;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Shadows Into Light', cursive;
-    font-size: 1.3em; */
     padding: 2vh;
 }
 
@@ -49,7 +46,6 @@
 
 .galleryItemPic {
     display: inline-block;
-    /* width: 250px; */
     height: 150px;
     margin-right: 2vh;
     margin-left: 2vh;
@@ -59,7 +55,6 @@
 
 .galleryItemDescription {
     font-family: 'Montserrat', sans-serif;
-    /* width: 250px; */
     height: 150px;
     overflow-y: auto;
     margin: 2vh;

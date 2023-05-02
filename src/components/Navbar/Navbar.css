@@ -18,9 +18,6 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    /* .navLinks {
-        display: inline;
-    } */
     .navLink {
         font-size: .9em;
     }

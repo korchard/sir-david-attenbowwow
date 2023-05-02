@@ -10,7 +10,6 @@ body {
 
 #root {
   height: auto;
-  /* position: absolute; */
   overflow-y: scroll;
 }
 

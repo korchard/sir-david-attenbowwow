@@ -1,10 +1,9 @@
 // REACT
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { createRoot } from 'react-dom/client';
 
 // REDUX
-import { createStore, applyMiddleware } from 'redux';
+import { legacy_createStore as createStore, applyMiddleware} from 'redux'
 // import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
@@ -39,12 +38,6 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-// const root = createRoot(document.getElementById('root'));
-// root.render(
-//   <Provider store={store}>
-//     <App />
-//   </Provider>,
-// );
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>

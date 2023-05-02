@@ -83,15 +83,11 @@
 
 @media only screen and (max-width: 1300px) {
     .aboutContent {
-        font-size: .9rem;
+        font-size: .9em;
     }
     .aboutHeader {
         margin-left: 30px;
-        /* font-size: .9em; */
     }
-    /* .aboutBio {
-        font-size: .9em;
-    } */
     .factsContent {
         font-size: .9em;
         min-width: 250px;
@@ -117,7 +113,6 @@
         border: 2px solid white;
         border-radius: 10px;
         padding: 0;
-        /* margin: 10px; */
     }
     .aboutFacts {
         margin: 0;

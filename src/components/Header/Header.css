@@ -1,7 +1,6 @@
 .headerItem {
     flex: auto;
     height: 15vh;
-    /* background-image: url('/public/images/bwca.jpg'); */
     background-position: center;
     background-image: 
         linear-gradient(
