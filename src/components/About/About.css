@@ -31,12 +31,12 @@
 
 .aboutBio {
     display: inline-block;
-    font-size: 1em;
 }
 
 .aboutInfo {
     padding-left: 30px;
     padding-right: 30px;
+    font-size: 1em;
 }
 
 .aboutImg {
