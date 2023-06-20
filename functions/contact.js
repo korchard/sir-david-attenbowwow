@@ -17,13 +17,12 @@ exports.handler = async function(event, context) {
     });
 
     const mailOptions = {
-        from: process.env.EMAIL,
+        from: data.email,
         to: process.env.EMAIL,
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
-                ${data.name}</p>
-                <p>${data.email}</p>`
+                ${data.name}</p>`
     };
 
     try {
@@ -50,41 +49,3 @@ exports.handler = async function(event, context) {
         };
     }
 };
-
-// require('dotenv').config();
-// const nodemailer = require('nodemailer');
-
-// exports.handler = function(event, context, callback) {
-//     let data = JSON.parse(event.body)
-
-//     let transporter = nodemailer.createTransport({
-//         service: 'gmail',
-//         host: 'smtp.gmail.com',
-//         port: 465,
-//         secure: true,
-//         auth:{
-//          user: process.env.EMAIL,
-//          pass: process.env.PASSWORD
-//     }
-//     });
-
-//     transporter.sendMail({
-//         from: data.email,
-//         to: process.env.EMAIL,
-//         subject: `${data.subject}`,
-//         html: `<p>${data.message}</p>
-//                 <p>Thank you, <br/>
-//                 ${data.name}</p>`
-//     }, function(error, info) {
-//         if (error) {
-//             callback(error);
-//         } else {
-//             callback(null, {
-//             statusCode: 200,
-//             body: JSON.stringify({
-//                    'result': 'success'
-//                 })
-//         });
-//         }
-//     });
-// }
