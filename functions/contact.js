@@ -22,7 +22,8 @@ exports.handler = async function(event, context) {
         subject: `${data.subject}`,
         html: `<p>${data.message}</p>
                 <p>Thank you, <br/>
-                ${data.name}</p>`
+                ${data.name}<br/>
+                ${data.email}</p>`
     };
 
     try {

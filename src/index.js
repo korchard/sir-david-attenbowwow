@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 
 // REDUX
 import { legacy_createStore as createStore, applyMiddleware} from 'redux'
-// import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
