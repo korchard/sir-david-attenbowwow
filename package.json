@@ -27,7 +27,7 @@
     "serverless-http": "^3.0.2",
     "sweetalert2": "^11.4.19",
     "typewriter-effect": "^2.18.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.0.0"
   },
   "main": "functions/server.js",
   "scripts": {
