@@ -3,9 +3,10 @@
       "config:base"
     ],
     "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch"],
-    },
-  ],
+      {
+        "matchPackagePatterns": ["*"],
+        "matchUpdateTypes": ["minor", "patch"],
+      },
+    ],
+    "schedule": "every Sunday at 9am",
 }
