@@ -10,7 +10,7 @@ const AnimatedText = () => {
     <div className='animatedText'>
       <Typewriter
         options={{
-          strings: ['an Ecologist', 'a Documentarian', 'a Sassy Pants'],
+          strings: ['an Ecologist', 'a Documentarian', 'a Naturalist', 'a Sassy Pants'],
           autoStart: true,
           loop: true,
         }}

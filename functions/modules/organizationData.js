@@ -1,26 +1,6 @@
 const organizationData = [
-    {   
+    {
         id: 1,
-        title: 'Cool Earth', 
-        description: `We champion the relationship between people, rainforest 
-        and climate. Cool Earth exists to give cash direct to rainforest communities, 
-        to fund projects that create choice, tackle the root causes of deforestation 
-        and protect vital carbon sinks. This is our mission. To back people, to 
-        protect the rainforest and fight the climate crisis. `, 
-        link: 'https://www.coolearth.org/donate/'
-    }, 
-    {
-        id: 2,
-        title: `Future For Nature`, 
-        description: `Future For Nature supports young, talented and ambitious 
-        conservationists committed to protecting species of wild animals and plants. 
-        The commitment of these individuals is what will make the difference for the 
-        future of nature. Through their leadership they inspire and mobilize communities, 
-        organizations, governments, investors and the public at large.`, 
-        link: 'https://futurefornature.org/donate'
-    }, 
-    {
-        id: 3,
         title: 'Save the Boundary Waters', 
         description: `Northeastern Minnesotans for Wilderness (NMW), which leads the 
         Campaign to Save the Boundary Waters, was formed in 1996 to continue working 
@@ -35,12 +15,32 @@ const organizationData = [
         link: 'https://www.savetheboundarywaters.org/donate'
     }, 
     {
-        id: 4,
+        id: 2,
         title: 'Trees, Water, People', 
         description: `Our mission is to improve people's lives by helping communities 
         protect, conserve, and manage the natural resources upon which their long-term 
         well-being depends.`, 
         link: 'https://treeswaterpeople.org/donate'
+    }, 
+    {   
+        id: 3,
+        title: 'Cool Earth', 
+        description: `We champion the relationship between people, rainforest 
+        and climate. Cool Earth exists to give cash direct to rainforest communities, 
+        to fund projects that create choice, tackle the root causes of deforestation 
+        and protect vital carbon sinks. This is our mission. To back people, to 
+        protect the rainforest and fight the climate crisis. `, 
+        link: 'https://www.coolearth.org/donate/'
+    }, 
+    {
+        id: 4,
+        title: `Future For Nature`, 
+        description: `Future For Nature supports young, talented and ambitious 
+        conservationists committed to protecting species of wild animals and plants. 
+        The commitment of these individuals is what will make the difference for the 
+        future of nature. Through their leadership they inspire and mobilize communities, 
+        organizations, governments, investors and the public at large.`, 
+        link: 'https://futurefornature.org/donate'
     }, 
     {
         id: 5,

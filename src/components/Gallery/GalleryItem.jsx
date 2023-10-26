@@ -11,7 +11,7 @@ const GalleryItem = (props) => {
           {props.gallery?.title}
         </div>
         <div className='galleryItemContent'>
-            <img src={props.gallery?.image} alt={props.gallery?.title} className='galleryItemPic'></img>
+            <img src={props.gallery?.image} alt={props.gallery?.title} className='galleryItemPic thumbnail'></img>
             <p className='galleryItemDescription'>
                 {props.gallery?.description}</p>
         </div>
