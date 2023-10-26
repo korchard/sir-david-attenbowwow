@@ -1,9 +1,10 @@
 // REACT
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // REDUX
 import { legacy_createStore as createStore, applyMiddleware} from 'redux'
+// import { configureStore, applyMiddleware} from 'redux'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import logger from 'redux-logger';
@@ -37,15 +38,22 @@ const store = createStore(
 
 sagaMiddleware.run(rootSaga);
 
-ReactDOM.render(
-  <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//       <Provider store={store}>
+//         <App />
+//       </Provider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>
+)
 
 reportWebVitals();
-
-

@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  HashRouter as Router,
-  Redirect,
+  BrowserRouter as Router,
+  Navigate,
   Route,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 
 // COMPONENTS
@@ -18,34 +18,24 @@ import Navbar from '../Navbar/Navbar';
 import './App.css';
 
 function App() {
-
   return (
     <Router>
-        <div className='mainContainer'>
-          <div className='headerContainer'>
-            <Header />
-            <Navbar />
-          </div>
-            <Switch>
-            <Redirect exact from='/' to='/about' />
-              <Route
-                exact
-                path='/about'
-                component={About}/>
-              <Route
-                exact
-                path='/gallery'
-                component={Gallery}/>
-              <Route
-                exact
-                path='/donate'
-                component={Donate}/>
-              {/* If none of the other routes matched, we will show a 404. */}
-              <Route render={() => <h1 className='error'>404</h1>} />
-            </Switch>
-          <Footer />
+      <div className='mainContainer'>
+        <div className='headerContainer'>
+          <Header />
+          <Navbar />
         </div>
-      </Router>
+        <Routes>
+          <Route path="/" element={<Navigate to="/about" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/donate" element={<Donate />} />
+          {/* If none of the other routes matched, we will show a 404. */}
+          <Route path="*" element={<h1 className='error'>404</h1>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
