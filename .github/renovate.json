@@ -20,6 +20,6 @@
       "semanticCommits": "minor"
     }
   ],
-  "schedule": "every Sunday at 9am"
+  "schedule": ["every Sunday at 9am"]
 }
 
