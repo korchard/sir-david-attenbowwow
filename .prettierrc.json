@@ -6,6 +6,5 @@
     "trailingComma": "es5",
     "singleQuote": true,
     "endOfLine": "lf",
-    "bracketSpacing": true,
-    "colon": false
+    "bracketSpacing": true
 }
