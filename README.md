@@ -4,4 +4,5 @@
     -[] Create a component for merch page.
     -[] Stripe/PayPal API.
     -[] All proceeds go to the listed organizations.
--[] Add new images.
+-CONTENT
+    -[] Add new images.
