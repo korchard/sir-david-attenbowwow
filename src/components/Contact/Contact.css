@@ -1,69 +1,69 @@
 .contactItem {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 label {
-    float: top;
+	float: top;
 }
 
 input {
-    font-family: 'Montserrat', sans-serif;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-    margin-bottom: 5px;
-    width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+	width: 100%;
 }
 
 .contactInput {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 10px;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 10px;
 }
 
 textarea {
-    font-family: 'Montserrat', sans-serif;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-    margin-top: 5px;
-    width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	width: 100%;
 }
 
 .contactArea {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 10px;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 10px;
 }
 
 .contactButton {
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 0%;
-    border: 1px solid;
-    background-color: transparent;
-    padding: 1vh;
-    margin-top: 1em;
-    margin-right: 2em;
-    float: right;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 0%;
+	border: 1px solid;
+	background-color: transparent;
+	padding: 1vh;
+	margin-top: 1em;
+	margin-right: 2em;
+	float: right;
 }
 
 .contactButton:hover {
-    color: #FFF;
-    background-color: rgba(7,0,156,0.7161458333333333);
+	color: #fff;
+	background-color: rgba(7, 0, 156, 0.7161458333333333);
 }
 
 .swal2 {
-    -webkit-tap-highlight-color: none;
+	-webkit-tap-highlight-color: none;
 }
 .swal2-popup {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 .swal2-content {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
 }
 
 button.swal2-styled.swal2-confirm {
-    border-radius: 0;
+	border-radius: 0;
 }

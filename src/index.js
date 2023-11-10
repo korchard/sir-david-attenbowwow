@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // REDUX
-import { legacy_createStore as createStore, applyMiddleware} from 'redux'
+import { legacy_createStore as createStore, applyMiddleware } from 'redux';
 // import { configureStore, applyMiddleware} from 'redux'
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
@@ -25,15 +25,16 @@ import reportWebVitals from './reportWebVitals';
 // MIDDLEWARE
 const sagaMiddleware = createSagaMiddleware();
 
-const middlewareList = process.env.NODE_ENV === 'development' ?
-  [sagaMiddleware, logger] :
-  [sagaMiddleware];
+const middlewareList =
+	process.env.NODE_ENV === 'development'
+		? [sagaMiddleware, logger]
+		: [sagaMiddleware];
 
 // STORE INSTANCE
 const store = createStore(
-  // () => {}, --- use if no reducers needed
-  rootReducer,
-  applyMiddleware(...middlewareList),
+	// () => {}, --- use if no reducers needed
+	rootReducer,
+	applyMiddleware(...middlewareList)
 );
 
 sagaMiddleware.run(rootSaga);
@@ -49,11 +50,11 @@ sagaMiddleware.run(rootSaga);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </React.StrictMode>
-)
+	<React.StrictMode>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</React.StrictMode>
+);
 
 reportWebVitals();

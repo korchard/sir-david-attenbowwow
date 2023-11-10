@@ -1,56 +1,56 @@
 .navLinks {
-    flex: auto;
-    display: inline-flex;
-    position: absolute;
-    top: 15px;
-    right: 30px;
+	flex: auto;
+	display: inline-flex;
+	position: absolute;
+	top: 15px;
+	right: 30px;
 }
 
 .navLink {
-    text-decoration: none;
-    padding: 10px;
-    color: white;
-    font-weight: 900;
+	text-decoration: none;
+	padding: 10px;
+	color: white;
+	font-weight: 900;
 }
 
 .navLink:hover {
-    color: rgba(253,132,29,0.8225884103641457);
+	color: rgba(253, 132, 29, 0.8225884103641457);
 }
 
 @media only screen and (max-width: 1300px) {
-    .navLink {
-        font-size: .9em;
-    }
+	.navLink {
+		font-size: 0.9em;
+	}
 }
 
 @media only screen and (max-width: 900px) {
-    .navLinks {
-        top: 5px;
-    }
+	.navLinks {
+		top: 5px;
+	}
 }
 
 @media only screen and (max-width: 660px) {
-    .navLinks {
-        right: 10px;
-    }
+	.navLinks {
+		right: 10px;
+	}
 }
 
 @media only screen and (max-width: 420px) {
-    .navLinks {
-        display: inline;;
-    }
+	.navLinks {
+		display: inline;
+	}
 }
 
 @media only screen and (max-width: 375px) {
-    .navLinks {
-        padding-left: 0;
-        padding-top: 1.5vh;
-    }
+	.navLinks {
+		padding-left: 0;
+		padding-top: 1.5vh;
+	}
 }
 
 @media only screen and (max-width: 280px) {
-    .navLinks {
-        display: inline-flex;
-        padding-right: 10%;
-    }
+	.navLinks {
+		display: inline-flex;
+		padding-right: 10%;
+	}
 }

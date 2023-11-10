@@ -1,26 +1,26 @@
 .mainContainer {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly safe;
-  align-items: stretch;
-  align-content: space-around safe;
-  min-height: 100vh;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly safe;
+	align-items: stretch;
+	align-content: space-around safe;
+	min-height: 100vh;
 }
 
 .headerContainer {
-  flex: auto;
+	flex: auto;
 }
 
 .error {
-  font-family: 'Monoton', cursive;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 50vh;
+	font-family: 'Monoton', cursive;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 50vh;
 }
 
 @media only screen and (max-width: 1300px) {
-  .mainContainer {
-      overflow: hidden;
-      height: auto;
-  }
+	.mainContainer {
+		overflow: hidden;
+		height: auto;
+	}
 }

@@ -5,9 +5,5 @@ import organizationsSaga from './organizations.saga';
 
 // CALLS ALL SAGAS
 export default function* rootSaga() {
-  yield all([
-    contactSaga(),
-    gallerySaga(),
-    organizationsSaga()
-  ]);
+	yield all([contactSaga(), gallerySaga(), organizationsSaga()]);
 }

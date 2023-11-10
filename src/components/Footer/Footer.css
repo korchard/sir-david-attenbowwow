@@ -1,139 +1,139 @@
 .footerItem {
-    flex: auto;
-    flex-direction: column;
-    padding-top: 5vh;
-    margin: 0;
-    width: 100%;
-    height: 45vh;
-    position: relative;
+	flex: auto;
+	flex-direction: column;
+	padding-top: 5vh;
+	margin: 0;
+	width: 100%;
+	height: 45vh;
+	position: relative;
 }
 
 footer {
-    display: inline-flex;
-    width: 100%;
+	display: inline-flex;
+	width: 100%;
 }
 
 .contactInfo {
-    width: 32%;
-    height: 40vh;
-    margin-left: 30px;
-    border-right: 1px solid black;
+	width: 32%;
+	height: 40vh;
+	margin-left: 30px;
+	border-right: 1px solid black;
 }
 
 .contactHeader {
-    font-family: 'Shadows Into Light', cursive;
-    font-weight: 400;
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: 400;
 }
 
 .contactLinks {
-    display: inline;
+	display: inline;
 }
 
 .instagram {
-    color: black;
-    text-decoration: none;
+	color: black;
+	text-decoration: none;
 }
 
 .contactForm {
-    width: 32%;
-    height: 40vh;
-    border-right: 1px solid black;
+	width: 32%;
+	height: 40vh;
+	border-right: 1px solid black;
 }
 
 .footerImage {
-    width: auto;
-    margin-left: 30px;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
+	width: auto;
+	margin-left: 30px;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
 }
 
 .footerName {
-    font-family: 'Shadows Into Light', cursive;
-    font-weight: 400;
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: 400;
 }
 
 @media only screen and (max-width: 1300px) {
-    .footerItem {
-        font-size: .9em;
-    }
+	.footerItem {
+		font-size: 0.9em;
+	}
 }
 
 @media only screen and (max-width: 1024px) {
-    .footerItem {
-        height: auto;
-        padding-bottom: 30px;
-    }
-    .contactInfo {
-        height: auto;
-    }
-    .contactForm {
-        height: auto;
-    }
+	.footerItem {
+		height: auto;
+		padding-bottom: 30px;
+	}
+	.contactInfo {
+		height: auto;
+	}
+	.contactForm {
+		height: auto;
+	}
 }
 
 @media only screen and (max-width: 900px) {
-    .contactInfo {
-        width: 45%;
-    }
-    .contactForm {
-        width: 43%;
-    }
-    .footerImage {
-        right: auto;
-        bottom: 10px;
-    }
-    #daveyCool {
-        width: 120px;
-    }
-    .footerName {
-        padding-bottom: 5px;
-    }
-    .footerLinks {
-        position: relative;
-        bottom: 10px;
-    }
+	.contactInfo {
+		width: 45%;
+	}
+	.contactForm {
+		width: 43%;
+	}
+	.footerImage {
+		right: auto;
+		bottom: 10px;
+	}
+	#daveyCool {
+		width: 120px;
+	}
+	.footerName {
+		padding-bottom: 5px;
+	}
+	.footerLinks {
+		position: relative;
+		bottom: 10px;
+	}
 }
 
 @media only screen and (max-width: 620px) {
-    .footerItem {
-        background-position: 0 100%;
-    }
-    footer {
-        display: block;
-    }
-    .contactInfo {
-        width: 90%;
-        border-bottom: 2px solid rgba(7,0,156,0.7161458333333333);
-        border-right: none;
-    }
-    .contactForm {
-        width: 90%;
-        border-bottom: 2px solid rgba(7,0,156,0.7161458333333333);
-        border-right: none;
-        margin-left: 30px;
-        padding-top: 3vh;
-        padding-bottom: 3vh;
-    }
-    .footerImage {
-        position: relative;
-        text-align: center;
-        padding-top: 3vh;
-        margin: 0;
-    }
+	.footerItem {
+		background-position: 0 100%;
+	}
+	footer {
+		display: block;
+	}
+	.contactInfo {
+		width: 90%;
+		border-bottom: 2px solid rgba(7, 0, 156, 0.7161458333333333);
+		border-right: none;
+	}
+	.contactForm {
+		width: 90%;
+		border-bottom: 2px solid rgba(7, 0, 156, 0.7161458333333333);
+		border-right: none;
+		margin-left: 30px;
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+	}
+	.footerImage {
+		position: relative;
+		text-align: center;
+		padding-top: 3vh;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 420px) {
-    .contactInfo {
-        width: 80%;
-    }
-    .contactForm {
-        width: 80%;
-    }
+	.contactInfo {
+		width: 80%;
+	}
+	.contactForm {
+		width: 80%;
+	}
 }
 
 @media only screen and (max-width: 280px) {
-    .footerItem {
-        font-size: .8em;
-    }
+	.footerItem {
+		font-size: 0.8em;
+	}
 }

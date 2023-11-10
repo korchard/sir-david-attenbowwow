@@ -1,25 +1,24 @@
 {
-  "extends": ["config:base"],
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
-      "groupName": "Minor, Patch, and Lockfile Maintenance Updates",
-      "semanticCommits": "minor"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["major"],
-      "groupName": "Major Updates",
-      "semanticCommits": "major"
-    },
-    {
-      "matchPackagePatterns": ["*"],
-      "matchUpdateTypes": ["initial", "pin", "digest", "unpublish"],
-      "groupName": "Other Updates",
-      "semanticCommits": "minor"
-    }
-  ],
-  "schedule": ["after 9am on sunday"]
+	"extends": ["config:base"],
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["*"],
+			"matchUpdateTypes": ["minor", "patch", "lockFileMaintenance"],
+			"groupName": "Minor, Patch, and Lockfile Maintenance Updates",
+			"semanticCommits": "minor"
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"matchUpdateTypes": ["major"],
+			"groupName": "Major Updates",
+			"semanticCommits": "major"
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"matchUpdateTypes": ["initial", "pin", "digest", "unpublish"],
+			"groupName": "Other Updates",
+			"semanticCommits": "minor"
+		}
+	],
+	"schedule": ["after 9am on sunday"]
 }
-

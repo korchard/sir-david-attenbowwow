@@ -1,74 +1,70 @@
 .headerItem {
-    flex: auto;
-    height: 15vh;
-    background-position: center;
-    background-image: 
-        linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-        ),
-        url('/public/images/bwca.jpg')
+	flex: auto;
+	height: 15vh;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url('/public/images/bwca.jpg');
 }
 
 .headerLogo {
-    height: 30px;
-    width: auto;
-    position: absolute;
-    top: 30px;
+	height: 30px;
+	width: auto;
+	position: absolute;
+	top: 30px;
 }
 
 .header {
-    font-size: 2em;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-    padding: 5vh;
-    margin-left: 2vh;
+	font-size: 2em;
+	font-family: 'Bebas Neue', cursive;
+	color: white;
+	padding: 5vh;
+	margin-left: 2vh;
 }
 
 @media only screen and (max-width: 1300px) {
-    .headerItem {
-        display: flex;
-    }
-    .header {
-        padding-bottom: 0;
-    }
+	.headerItem {
+		display: flex;
+	}
+	.header {
+		padding-bottom: 0;
+	}
 }
 
 @media only screen and (max-width: 920px) {
-    .headerItem {
-        height: 20vh;
-    }
+	.headerItem {
+		height: 20vh;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-    .header {
-        font-size: 1.5em;
-    }
+	.header {
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (max-width: 650px) {
-    .headerItem {
-        height: 15vh;
-    }
+	.headerItem {
+		height: 15vh;
+	}
 }
 
 @media only screen and (max-width: 375px) {
-    .headerItem {
-        text-align: center;
-    }
-    .header {
-        font-size: 1.3em;
-        padding: 6vh;
-        padding-left: 0;
-        padding-right: 0;
-    }
+	.headerItem {
+		text-align: center;
+	}
+	.header {
+		font-size: 1.3em;
+		padding: 6vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 @media only screen and (max-width: 280px) {
-    .header {
-        padding: 7vh;
-        text-align: center;
-        margin: 0;
-        margin-left: 5%;
-    }
+	.header {
+		padding: 7vh;
+		text-align: center;
+		margin: 0;
+		margin-left: 5%;
+	}
 }
