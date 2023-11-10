@@ -6,3 +6,7 @@
     -[] All proceeds go to the listed organizations.
 -CONTENT
     -[] Add new images.
+
+-MAINTENANCE
+    -[] Add eslint and fix issues.
+    -[] Write basic tests to ensure dependency updates pass.
