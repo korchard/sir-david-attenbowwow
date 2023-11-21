@@ -15,10 +15,7 @@ import { FaInstagramSquare } from 'react-icons/fa';
 
 const Footer = () => {
 	const instagram = () => {
-		window.open(
-			'https://www.instagram.com/sir_david_attenbowwow/?hl=en',
-			'_blank'
-		);
+		window.open('https://www.instagram.com/sir_david_attenbowwow/?hl=en', '_blank');
 	};
 
 	return (

@@ -25,10 +25,7 @@ import reportWebVitals from './reportWebVitals';
 // MIDDLEWARE
 const sagaMiddleware = createSagaMiddleware();
 
-const middlewareList =
-	process.env.NODE_ENV === 'development'
-		? [sagaMiddleware, logger]
-		: [sagaMiddleware];
+const middlewareList = process.env.NODE_ENV === 'development' ? [sagaMiddleware, logger] : [sagaMiddleware];
 
 // STORE INSTANCE
 const store = createStore(

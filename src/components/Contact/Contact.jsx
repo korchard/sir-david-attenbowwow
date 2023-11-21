@@ -64,9 +64,7 @@ const Contact = () => {
 							name="email"
 							required
 							value={contact.email}
-							onChange={(e) =>
-								setContact({ ...contact, email: e.target.value })
-							}
+							onChange={(e) => setContact({ ...contact, email: e.target.value })}
 						/>
 					</label>
 				</div>
@@ -78,9 +76,7 @@ const Contact = () => {
 							name="subject"
 							required
 							value={contact.subject}
-							onChange={(e) =>
-								setContact({ ...contact, subject: e.target.value })
-							}
+							onChange={(e) => setContact({ ...contact, subject: e.target.value })}
 						/>
 					</label>
 				</div>
@@ -93,9 +89,7 @@ const Contact = () => {
 							name="message"
 							required
 							value={contact.message}
-							onChange={(e) =>
-								setContact({ ...contact, message: e.target.value })
-							}
+							onChange={(e) => setContact({ ...contact, message: e.target.value })}
 						/>
 					</label>
 				</div>
