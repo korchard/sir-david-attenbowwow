@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 // STYLING
@@ -20,11 +21,17 @@ const Organization = (props) => {
 			>
 				{props.org?.title}
 			</Link>
-			<p className="donateDescription">
-				A description from their website: "{props.org?.description}"
-			</p>
+			<p className="donateDescription">A description from their website: "{props.org?.description}"</p>
 		</div>
 	);
+};
+
+Organization.propTypes = {
+	org: PropTypes.shape({
+		link: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+		description: PropTypes.string.isRequired,
+	}),
 };
 
 export default Organization;
