@@ -8,5 +8,4 @@
     -[] Add new images.
 
 -MAINTENANCE
-    -[] Add eslint and fix issues.
     -[] Write basic tests to ensure dependency updates pass.
