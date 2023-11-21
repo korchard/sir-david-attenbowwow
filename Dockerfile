@@ -1,5 +1,5 @@
 # pull base image
-FROM node:21.0.0
+FROM node:21.2.0
 
 # make and set working directory.
 RUN mkdir -p /app
