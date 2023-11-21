@@ -16,7 +16,7 @@ const About = () => {
 						I am &nbsp;
 						<AnimatedText />.
 					</div>
-					<div className="aboutBio">
+					<div className="aboutBio ">
 						<img
 							src="../images/daveySteamboat.jpg"
 							alt="Davey near Steamboat Lake"
