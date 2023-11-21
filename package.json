@@ -39,7 +39,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"prepare": "husky install",
-		"lint": "eslint src/**/*.js src/**/*.jsx --ignore-path .gitignore"
+		"lint": "eslint src/**/*.js src/**/*.jsx --ignore-path .gitignore",
+		"doit": "eslint --fix src/components/About/About.jsx"
 	},
 	"eslintConfig": {
 		"extends": [

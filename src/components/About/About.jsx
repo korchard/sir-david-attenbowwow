@@ -24,7 +24,9 @@ const About = () => {
 							appreciation for, our planet Earth. My namesake, Sir David Attenborough, summarizes my hope succinctly:
 							<br></br>
 							<br></br>
-							"An understanding of the natural world is a source of not only great curiosity, but great fulfilment."
+							{/* eslint-disable-next-line prettier/prettier */}
+							&quot;An understanding of the natural world is a source of not only great curiosity, but great
+							fulfilment.&quot;
 							<br></br>
 							<br></br>I reside in Minneapolis, MN with my paw-rents, Kimberly and Eddy, both of whom value living in
 							reciprocity with Earth. They are continually working towards educating themselves around how they can be

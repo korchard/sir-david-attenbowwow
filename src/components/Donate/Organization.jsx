@@ -21,6 +21,7 @@ const Organization = (props) => {
 			>
 				{props.org?.title}
 			</Link>
+			{/* eslint-disable-next-line react/no-unescaped-entities */}
 			<p className="donateDescription">A description from their website: "{props.org?.description}"</p>
 		</div>
 	);
