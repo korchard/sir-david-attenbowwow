@@ -1,6 +1,6 @@
 const galleryData = require('./modules/galleryData');
 
-exports.handler = async function (event, context) {
+export const handler = async function () {
 	return {
 		statusCode: 200,
 		body: JSON.stringify(galleryData),

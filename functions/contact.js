@@ -2,7 +2,7 @@ require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 // NODEMAILER && POST ROUTE to receive an email
-exports.handler = async function (event, context) {
+export const handler = async function (event) {
 	const data = JSON.parse(event.body);
 
 	let transporter = nodemailer.createTransport({
